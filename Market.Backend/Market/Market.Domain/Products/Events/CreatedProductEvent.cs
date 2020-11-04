@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using Core.Commands;
 using Core.Events.DomainEvents;
-using Market.Domain.Products.DomainObjects.Entities;
-using Market.Domain.Products.DomainObjects.ValueObjects;
+using Market.Domain.Products.Entities;
 using Market.Domain.Products.Enums;
+using Market.Domain.Products.ValueObjects;
 
 namespace Market.Domain.Products.Events
 {
-    public class CreatedProductEvent : DomainEvent<Product,long>
+    public class CreatedProductEvent : DomainEvent<Product, Guid>
     {
         public decimal Price { get; private set; }
         public string Color { get; private set; }

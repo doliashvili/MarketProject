@@ -1,14 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using Core.Commands;
-using Market.Domain.Products.DomainObjects.ValueObjects;
 using Market.Domain.Products.Enums;
+using Market.Domain.Products.ValueObjects;
 
 namespace Market.Domain.Products.Commands
 {
-    public class CreateProductCommand : Command<long>
+    public class CreateProductCommand : Command<Guid>
     {
-        public override long Id { get; protected set; }
+        public override Guid Id { get; protected set; }
+        [Range(0,int.MaxValue)]
         public decimal Price { get; private set; }
         public string Color { get; private set; }
         public string Brand { get; private set; }
@@ -42,7 +44,7 @@ namespace Market.Domain.Products.Commands
             CommandMeta commandMeta,
             long? exceptionVersion=null) : base(commandMeta,exceptionVersion)
         {
-            Id = id;
+            Id = Guid.NewGuid();
             Price = price;
             Color = color;
             Brand = brand;

@@ -1,7 +1,7 @@
 ﻿using Core.Domain;
 using Market.Domain.Products.Enums;
 
-namespace Market.Domain.Products.DomainObjects.ValueObjects
+namespace Market.Domain.Products.ValueObjects
 {
     public class Weight : ValueObject<Weight>
     {

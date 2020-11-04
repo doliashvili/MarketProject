@@ -1,10 +1,8 @@
-﻿using Core.Queries;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
+using Core.Queries;
 using Market.ReadModels.Models;
 
-namespace Market.ReadModels.Read.Queries.Products
+namespace Market.ReadModels.Read.Products.Queries
 {
     public class GetAllProducts : IQuery<ProductReadModel>, IQuery<IReadOnlyList<ProductReadModel>>
     {

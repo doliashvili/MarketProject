@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using Market.Domain.Products.DomainObjects.ValueObjects;
 using Market.Domain.Products.Enums;
+using Market.Domain.Products.ValueObjects;
 
-namespace Market.Domain.Products.DomainObjects.Entities
+namespace Market.Domain.Products.Entities
 {
     public partial class Product
     {

@@ -1,16 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Runtime.InteropServices;
 using Core.Domain;
 using Market.Domain.Products.Commands;
-using Market.Domain.Products.DomainObjects.ValueObjects;
-using Market.Domain.Products.Enums;
 using Market.Domain.Products.Events;
 using Market.Domain.Products.Exceptions;
 
-namespace Market.Domain.Products.DomainObjects.Entities
+namespace Market.Domain.Products.Entities
 {
-    public partial class Product : AggregateRoot<long>
+    public partial class Product : AggregateRoot<Guid>
     {
 
         public Product() { }

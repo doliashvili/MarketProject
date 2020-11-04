@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 using Core.Queries;
 using Core.Repository;
 using Market.ReadModels.Models;
-using Market.ReadModels.Read.Queries.Products;
+using Market.ReadModels.Read.Products.Queries;
 
 namespace Market.ReadModels.Read.Products.QueriesHandler
 {
     public class ProductQueriesHandler :
-        IQueryHandler<GetAllProducts,IReadOnlyList<ProductReadModel>>
+        IQueryHandler<GetAllProducts,IReadOnlyList<ProductReadModel>>,
+        IQueryHandler<GetProducts,IReadOnlyList<ProductReadModel>>
     {
         private readonly IReadModelRepository<ProductReadModel> _repo;
 
@@ -20,9 +21,15 @@ namespace Market.ReadModels.Read.Products.QueriesHandler
             _repo = repo;
         }
 
-        public Task<IReadOnlyList<ProductReadModel>> HandleAsync(GetAllProducts query, CancellationToken cancellationToken = new CancellationToken())
+        public Task<IReadOnlyList<ProductReadModel>> HandleAsync(GetAllProducts query, CancellationToken cancellationToken = default)
         {
-            throw new NotImplementedException();
+            return _repo.QueryListAsync(null, 0, int.MaxValue, cancellationToken);
+        }
+
+        public Task<IReadOnlyList<ProductReadModel>> HandleAsync(GetProducts query, CancellationToken cancellationToken = new CancellationToken())
+        {
+            return _repo.QueryListAsync(page: query.Page, pageSize: query.PageSize,
+                cancellationToken: cancellationToken);
         }
     }
 }

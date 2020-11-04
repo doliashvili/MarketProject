@@ -5,10 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Write\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Market.Domain\Market.Domain.csproj" />
   </ItemGroup>
 

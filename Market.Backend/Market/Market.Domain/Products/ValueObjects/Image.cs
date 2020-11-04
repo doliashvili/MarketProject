@@ -1,6 +1,6 @@
 ﻿using Core.Domain;
 
-namespace Market.Domain.Products.DomainObjects.ValueObjects
+namespace Market.Domain.Products.ValueObjects
 {
     public class Image : ValueObject<Image>
     {

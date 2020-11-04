@@ -5,10 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="EventHandlers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Market.Domain\Market.Domain.csproj" />
   </ItemGroup>
 
@@ -16,6 +12,10 @@
     <Reference Include="Core">
       <HintPath>..\Library\Core.dll</HintPath>
     </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="EventHandlers\" />
   </ItemGroup>
 
 </Project>
