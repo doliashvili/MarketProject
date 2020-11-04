@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {}
+    ".NETCoreApp,Version=v3.1": {
+      "Market.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/Market.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Market.Domain.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Market.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Market.Domain/Market.Domain.csproj",
+      "msbuildProject": "../Market.Domain/Market.Domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": []
+    ".NETCoreApp,Version=v3.1": [
+      "Market.Domain >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\user\\.nuget\\packages\\": {},
@@ -36,7 +55,11 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\MarketProject\\MarketProject\\Market.Backend\\Market\\Market.Domain\\Market.Domain.csproj": {
+              "projectPath": "C:\\MarketProject\\MarketProject\\Market.Backend\\Market\\Market.Domain\\Market.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

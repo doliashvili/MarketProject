@@ -5,6 +5,6 @@
     /// </summary>
     public interface IReadModel
     {
-        string Id { get; protected set; }
+       public string Id { get; set; }
     }
 }

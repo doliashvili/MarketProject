@@ -1,0 +1,4 @@
+C:\MarketProject\MarketProject\Market.Backend\Market\Market.ReadModels\obj\Debug\netcoreapp3.1\Market.ReadModels.csprojAssemblyReference.cache
+C:\MarketProject\MarketProject\Market.Backend\Market\Market.ReadModels\obj\Debug\netcoreapp3.1\Market.ReadModels.AssemblyInfoInputs.cache
+C:\MarketProject\MarketProject\Market.Backend\Market\Market.ReadModels\obj\Debug\netcoreapp3.1\Market.ReadModels.AssemblyInfo.cs
+C:\MarketProject\MarketProject\Market.Backend\Market\Market.ReadModels\obj\Debug\netcoreapp3.1\Market.ReadModels.csproj.CoreCompileInputs.cache

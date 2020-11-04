@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Enterprise.Backend"
+    "\\Market.Backend",
+    "\\Market.Backend\\Market"
   ],
-  "SelectedNode": "\\Enterprise.Backend\\Enterprise.Backend.sln",
+  "SelectedNode": "\\Market.Backend\\Market\\Market.Domain",
   "PreviewInSolutionExplorer": false
 }

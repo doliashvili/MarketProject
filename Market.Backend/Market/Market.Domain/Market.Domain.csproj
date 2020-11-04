@@ -4,4 +4,10 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Reference Include="Core">
+      <HintPath>..\Library\Core.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
