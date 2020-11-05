@@ -1,0 +1,13 @@
+C:\MarketProject\MarketProject\Market.Backend\Market\CoreTests\bin\Debug\netcoreapp3.1\CoreTests.deps.json
+C:\MarketProject\MarketProject\Market.Backend\Market\CoreTests\bin\Debug\netcoreapp3.1\CoreTests.dll
+C:\MarketProject\MarketProject\Market.Backend\Market\CoreTests\obj\Debug\netcoreapp3.1\CoreTests.csprojAssemblyReference.cache
+C:\MarketProject\MarketProject\Market.Backend\Market\CoreTests\obj\Debug\netcoreapp3.1\CoreTests.AssemblyInfoInputs.cache
+C:\MarketProject\MarketProject\Market.Backend\Market\CoreTests\obj\Debug\netcoreapp3.1\CoreTests.AssemblyInfo.cs
+C:\MarketProject\MarketProject\Market.Backend\Market\CoreTests\bin\Debug\netcoreapp3.1\CoreTests.runtimeconfig.json
+C:\MarketProject\MarketProject\Market.Backend\Market\CoreTests\bin\Debug\netcoreapp3.1\CoreTests.runtimeconfig.dev.json
+C:\MarketProject\MarketProject\Market.Backend\Market\CoreTests\obj\Debug\netcoreapp3.1\CoreTests.genruntimeconfig.cache
+C:\MarketProject\MarketProject\Market.Backend\Market\CoreTests\bin\Debug\netcoreapp3.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\MarketProject\MarketProject\Market.Backend\Market\CoreTests\bin\Debug\netcoreapp3.1\xunit.runner.reporters.netcoreapp10.dll
+C:\MarketProject\MarketProject\Market.Backend\Market\CoreTests\bin\Debug\netcoreapp3.1\xunit.runner.utility.netcoreapp10.dll
+C:\MarketProject\MarketProject\Market.Backend\Market\CoreTests\bin\Debug\netcoreapp3.1\Core.dll
+C:\MarketProject\MarketProject\Market.Backend\Market\CoreTests\obj\Debug\netcoreapp3.1\CoreTests.csproj.CopyComplete
