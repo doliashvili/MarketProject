@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Text;
 using Core;
 using Core.Models;
-using EventStore.EventStoreDb;
 using EventStore.MongoDb;
 using ReadModelRepository.RavenDb;
 
