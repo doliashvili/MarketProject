@@ -15,7 +15,7 @@ namespace CoreTests.CommandHandlers
         ICommandHandler<ChangeProductNameCommand>
     {
         private readonly IAggregateRepository<ProductAggregate, Guid> _repo;
-        
+        public static bool IsHandled;
         public ProductCommandHandlers(IAggregateRepository<ProductAggregate,Guid> repo)
         {
             _repo = repo;
@@ -23,6 +23,7 @@ namespace CoreTests.CommandHandlers
         public async Task HandleAsync(CreateProductCommand command, CancellationToken cancellationToken = new CancellationToken())
         {
             var aggregate= new ProductAggregate(command);
+            IsHandled = true;
             await _repo.SaveAsync(aggregate,cancellationToken);
         }
 

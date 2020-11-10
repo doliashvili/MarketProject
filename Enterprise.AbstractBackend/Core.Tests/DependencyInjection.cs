@@ -1,4 +1,7 @@
 ﻿using System;
+using Core.Repository;
+using Core.Tests.CarApp.DomainObjects;
+using EventStore.MSSQL;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Core.Tests
@@ -13,6 +16,7 @@ namespace Core.Tests
             if (_services == null)
             {
                 _services = new ServiceCollection();
+                RegisterServices();
                 _provider = _services.BuildServiceProvider();
             }
 
@@ -22,9 +26,9 @@ namespace Core.Tests
 
         private static void RegisterServices()
         {
-            _services.AddCQRS(typeof(DependencyInjection).Assembly);
-            _services.AddInternalEventingSystem(typeof(DependencyInjection).Assembly);
-
+            _services.AddCQRS(typeof(Core.DependencyInjection).Assembly);
+            _services.AddInternalEventingSystem(typeof(Core.DependencyInjection).Assembly);
+            _services.AddEntityDbEventStore("Server=(localdb)\\mssqllocaldb;Database=master;Trusted_Connection=True;");
         }
 
     }

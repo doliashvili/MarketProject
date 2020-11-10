@@ -17,7 +17,7 @@ namespace CoreTests
         public static IServiceProvider GetServiceProvider()
         {
             _services ??= new ServiceCollection();
-            //todo add registration
+            RegisterServices();
             return _services.BuildServiceProvider();
         }
 

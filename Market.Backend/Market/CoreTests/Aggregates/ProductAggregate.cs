@@ -1,6 +1,7 @@
 ﻿using Core.Domain;
 using System;
 using CoreTests.Commands;
+using CoreTests.Events;
 
 
 namespace CoreTests.Aggregates
@@ -19,7 +20,7 @@ namespace CoreTests.Aggregates
             Name = command.Name;
             Id = command.Id;
 
-            ApplyChange();
+            ApplyChange(new CreatedProductEvent(command.Name,this,command));
         }
 
 

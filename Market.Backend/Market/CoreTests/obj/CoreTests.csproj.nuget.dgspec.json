@@ -45,6 +45,10 @@
               "target": "Package",
               "version": "[3.1.9, )"
             },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.7.1, )"
+            },
             "xunit": {
               "target": "Package",
               "version": "[2.4.1, )"

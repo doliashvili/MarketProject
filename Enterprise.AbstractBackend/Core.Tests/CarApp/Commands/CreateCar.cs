@@ -11,7 +11,8 @@ namespace Core.Tests.CarApp.Commands
         public string Model { get; protected set; }
         public int HorsePower { get; protected set; }
 
-        public CreateCar(Guid id, string model, int horsePower)
+        public CreateCar(Guid id, string model, int horsePower, CommandMeta commandMeta)
+            : base(commandMeta)
         {
             Id = id;
             Model = model;

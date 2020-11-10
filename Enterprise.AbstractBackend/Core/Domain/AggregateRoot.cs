@@ -28,7 +28,7 @@ namespace Core.Domain
                 if (!isFromHistory)
                 {
                     _events.Enqueue(domainEvent);
-                    domainEvent.SetVersion(Version + 1);
+                    domainEvent.SetVersion((Version + 1));
                 }
                 if(Version + 1 != domainEvent.Version)
                     throw new AggregateVersioningException(

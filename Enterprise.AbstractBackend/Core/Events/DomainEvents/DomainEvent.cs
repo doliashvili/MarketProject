@@ -31,9 +31,9 @@ namespace Core.Events.DomainEvents
             EventName = GetType().Name;
             EventType = GetType().AssemblyQualifiedName;
             TimeStamp = DateTime.UtcNow;
-            CommandMeta = command.CommandMeta;
+            CommandMeta = command?.CommandMeta;
             if (AggregateId.Equals(default))
-                AggregateId = aggregateRoot.Id;
+                AggregateId = aggregateRoot==null ? default : aggregateRoot.Id;
         }
     }
 }
