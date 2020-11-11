@@ -17,8 +17,9 @@ namespace ReadModelRepository.RavenDb.implementation
     /// </summary>
     /// <typeparam name="TReadModel"></typeparam>
     /// <typeparam name="TId"></typeparam>
-    public class RavenReadModelRepository<TReadModel> : IReadModelRepository<TReadModel>, IDisposable
-        where TReadModel: IReadModel
+    public class RavenReadModelRepository<TReadModel,TId> : IReadModelRepository<TReadModel,TId>, IDisposable
+        where TReadModel: IReadModel<TId>
+        where TId : IComparable,IEquatable<TId>
     {
         private readonly IDocumentStore _db;
         private IAsyncDocumentSession _session = null;
@@ -58,9 +59,9 @@ namespace ReadModelRepository.RavenDb.implementation
         }
 
 
-        public async Task<TReadModel> UpdateAsync(string id, Action<TReadModel> action, CancellationToken cancellationToken = default)
+        public async Task<TReadModel> UpdateAsync(TId id, Action<TReadModel> action, CancellationToken cancellationToken = default)
         {
-            var obj = await Session.LoadAsync<TReadModel>(id, cancellationToken);
+            var obj = await Session.LoadAsync<TReadModel>(id.ToString(), cancellationToken);
             if (obj == null)
                 return default;
             action(obj);
@@ -69,7 +70,7 @@ namespace ReadModelRepository.RavenDb.implementation
         }
 
 
-        public async Task DeleteAsync(string id, CancellationToken cancellationToken = default)
+        public async Task DeleteAsync(TId id, CancellationToken cancellationToken = default)
         {
             Session.Delete(id);
             await Session.SaveChangesAsync(cancellationToken);
@@ -84,9 +85,9 @@ namespace ReadModelRepository.RavenDb.implementation
             await Session.SaveChangesAsync(cancellationToken);
         }
 
-        public Task<TReadModel> GetByIdAsync(string id, CancellationToken cancellationToken = default)
+        public Task<TReadModel> GetByIdAsync(TId id, CancellationToken cancellationToken = default)
         {
-            return Session.LoadAsync<TReadModel>(id, cancellationToken);
+            return Session.LoadAsync<TReadModel>(id.ToString(), cancellationToken);
         }
 
 

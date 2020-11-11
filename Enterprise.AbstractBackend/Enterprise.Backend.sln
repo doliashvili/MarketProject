@@ -25,6 +25,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventStore.MongoDb", "Event
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventStore.MSSQL", "EventStore.EntityFramework\EventStore.MSSQL.csproj", "{FB45CF1D-0689-4064-9E0B-8B936AD961AC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository.MSSQL", "Repository.MSSQL\Repository.MSSQL.csproj", "{3F30F987-42A7-43FA-AB55-A3F5EAF37CDF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -67,6 +69,10 @@ Global
 		{FB45CF1D-0689-4064-9E0B-8B936AD961AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB45CF1D-0689-4064-9E0B-8B936AD961AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB45CF1D-0689-4064-9E0B-8B936AD961AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F30F987-42A7-43FA-AB55-A3F5EAF37CDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F30F987-42A7-43FA-AB55-A3F5EAF37CDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F30F987-42A7-43FA-AB55-A3F5EAF37CDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F30F987-42A7-43FA-AB55-A3F5EAF37CDF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -82,6 +88,7 @@ Global
 		{D2BCC116-3DB2-47B0-BC34-A86929C1410C} = {5CBA5E89-9270-41C3-A1F6-CEB60B2392A1}
 		{C037F310-64DF-42A1-AF0A-938ED6FAB37F} = {EB14DC63-7D8A-4C59-AD8A-21ADAD872032}
 		{FB45CF1D-0689-4064-9E0B-8B936AD961AC} = {EB14DC63-7D8A-4C59-AD8A-21ADAD872032}
+		{3F30F987-42A7-43FA-AB55-A3F5EAF37CDF} = {EB14DC63-7D8A-4C59-AD8A-21ADAD872032}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8B22EAA1-5EA2-46FF-8A8E-6B52821B49B1}
