@@ -9,13 +9,18 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="Core">
-      <HintPath>..\Library\Core.dll</HintPath>
-    </Reference>
+    <Folder Include="EventHandlers\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="EventHandlers\" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="5.0.0" />
+    <PackageReference Include="PhotoSauce.MagicScaler" Version="0.11.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Core">
+      <HintPath>..\Library\Core.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

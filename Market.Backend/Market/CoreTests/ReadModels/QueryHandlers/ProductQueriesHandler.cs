@@ -11,9 +11,9 @@ namespace CoreTests.ReadModels.QueryHandlers
 {
     public class ProductQueriesHandler : IQueryHandler<GetAllProductQuery,IReadOnlyList<ProductReadModel>>
     {
-        private readonly IReadModelRepository<ProductReadModel> _repo;
+        private readonly IReadModelRepository<ProductReadModel,Guid> _repo;
 
-        public ProductQueriesHandler(IReadModelRepository<ProductReadModel> repo)
+        public ProductQueriesHandler(IReadModelRepository<ProductReadModel,Guid> repo)
         {
             _repo = repo;
         }

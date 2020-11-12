@@ -17,7 +17,7 @@ namespace EventStore.MSSQL.Implementation
 {
     public class EntityDbImplementation<TA, TId> : IEventStore<TA, TId>
     where TA : IAggregateRoot<TId>, new()
-    where TId : IEquatable<TId> , IComparable
+    where TId : IEquatable<TId>, IComparable
     {
         private string EventStoreTableName = "EventStore";
         //Todo add EventType ?
@@ -32,7 +32,7 @@ namespace EventStore.MSSQL.Implementation
             TypeNameHandling = TypeNameHandling.All,
             NullValueHandling = NullValueHandling.Ignore,
             ContractResolver = new PrivateSetterContractResolver()
-    };
+        };
 
         public EntityDbImplementation(ISqlConnectionFactory connectionFactory)
         {
@@ -47,7 +47,7 @@ namespace EventStore.MSSQL.Implementation
                 $@"INSERT INTO {EventStoreTableName} ({EventStoreListOfColumnsInsert})
                     VALUES (@Id,@CreatedAt,@Version,@Name,@AggregateId,@Data);";
 
-            var listOfEvents = domainEvents.OrderBy(x=> x.Version).Select(ev => new
+            var listOfEvents = domainEvents.OrderBy(x => x.Version).Select(ev => new
             {
                 CreatedAt = ev.TimeStamp,
                 Data = JsonConvert.SerializeObject(ev, Formatting.Indented, _jsonSerializerSettings),
@@ -63,24 +63,24 @@ namespace EventStore.MSSQL.Implementation
 
         public async Task<TA> RestoreAsync(TId id, CancellationToken cancellationToken = default)
         {
-            if (id == null) 
+            if (id == null)
                 throw new AggregateRootNotProvidedException("AggregateRootId cannot be null");
 
             var query = new StringBuilder($@"SELECT {EventStoreListOfColumnsSelect} FROM {EventStoreTableName}");
             query.Append(" WHERE [AggregateId] = @AggregateId ");
             query.Append(" ORDER BY [Version] ASC;");
-            var agr= new TA();
+            var agr = new TA();
 
             await using var connection = _connectionFactory.SqlConnection();
-                var events = (await connection.QueryAsync<EventStoreDao>(query.ToString(), id != null ? new { AggregateId = id.ToString() } : null)).ToList();
-                var domainEvents = events.Select(TransformEvent).Where(x => x != null).ToList().AsReadOnly();
+            var events = (await connection.QueryAsync<EventStoreDao>(query.ToString(), id != null ? new { AggregateId = id.ToString() } : null)).ToList();
+            var domainEvents = events.Select(TransformEvent).Where(x => x != null).ToList().AsReadOnly();
 
-                foreach (var domainEvent in domainEvents)
-                {
-                    agr.ApplyChange(domainEvent,true);
-                }
+            foreach (var domainEvent in domainEvents)
+            {
+                agr.ApplyChange(domainEvent, true);
+            }
 
-            return agr.Version==0 ? default : agr;
+            return agr.Version == 0 ? default : agr;
         }
 
         private IDomainEvent<TId> TransformEvent(EventStoreDao eventSelected)

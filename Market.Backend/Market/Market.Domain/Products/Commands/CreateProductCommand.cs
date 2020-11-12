@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using Core.Commands;
+using Market.Domain.FileManager;
 using Market.Domain.Products.Enums;
 using Market.Domain.Products.ValueObjects;
+using Microsoft.AspNetCore.Http;
 
 namespace Market.Domain.Products.Commands
 {
@@ -25,6 +27,7 @@ namespace Market.Domain.Products.Commands
         public DateTime CreateTime { get; private set; }
         public List<Image> Images { get; private set; }
         public DateTime Expiration { get; private set; }
+        public List<IFormFile> IFormFiles { get; private set; }
 
         public CreateProductCommand(long id,
             decimal price,
@@ -40,7 +43,7 @@ namespace Market.Domain.Products.Commands
             float discount,
             DateTime createTime,
             DateTime expiration,
-            List<Image> images,
+            List<IFormFile> formFiles,
             CommandMeta commandMeta,
             long? exceptionVersion=null) : base(commandMeta,exceptionVersion)
         {
@@ -57,10 +60,14 @@ namespace Market.Domain.Products.Commands
             Size = size;
             Discount = discount;
             CreateTime = createTime;
-            Images = images;
             Expiration = expiration;
+            IFormFiles = formFiles;
         }
 
-        
+        public void SetImages(List<Image> images)
+        {
+            Images = images;
+        }
+
     }
 }

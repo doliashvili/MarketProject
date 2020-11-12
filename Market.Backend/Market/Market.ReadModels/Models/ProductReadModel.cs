@@ -7,9 +7,9 @@ using Market.Domain.Products.ValueObjects;
 
 namespace Market.ReadModels.Models
 {
-    public class ProductReadModel : IReadModel
+    public class ProductReadModel : IReadModel<Guid>
     {
-        public string Id { get; set; }
+        public Guid Id { get; set; }
         public long Version { get; set; }
         public decimal Price { get; set; }
         public string Color { get; set; }

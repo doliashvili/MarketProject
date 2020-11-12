@@ -8,6 +8,6 @@ namespace Core.Queries
     public interface IReadModel<TId>
     where TId : IComparable , IEquatable<TId>
     {
-       public TId Id { get; set; }
+        TId Id { get; set; }
     }
 }

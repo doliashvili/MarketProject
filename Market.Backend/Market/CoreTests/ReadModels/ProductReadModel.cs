@@ -5,9 +5,9 @@ using Core.Queries;
 
 namespace CoreTests.ReadModels
 {
-    public class ProductReadModel : IReadModel
+    public class ProductReadModel : IReadModel<Guid>
     {
-        public string Id { get; set; }
+        public Guid Id { get; set; }
         public string Name { get; set; }
 
     }

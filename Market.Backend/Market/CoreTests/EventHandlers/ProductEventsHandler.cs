@@ -12,9 +12,9 @@ namespace CoreTests.EventHandlers
 {
     public class ProductEventsHandler : IInternalEventHandler<CreatedProductEvent>
     {
-        private readonly IReadModelRepository<ProductReadModel> _repo;
+        private readonly IReadModelRepository<ProductReadModel,Guid> _repo;
         public static bool IsHandled;
-        public ProductEventsHandler(IReadModelRepository<ProductReadModel> repo)
+        public ProductEventsHandler(IReadModelRepository<ProductReadModel,Guid> repo)
         {
             _repo = repo;
         }
@@ -23,7 +23,7 @@ namespace CoreTests.EventHandlers
         {
             var productReadModel = new ProductReadModel()
             {
-                Id = @event.AggregateId.ToString(),
+                Id = @event.AggregateId,
                 Name = @event.Name,
             };
             IsHandled = true;

@@ -12,6 +12,9 @@
     <Reference Include="Core">
       <HintPath>..\Library\Core.dll</HintPath>
     </Reference>
+    <Reference Include="Repository.MSSQL">
+      <HintPath>..\Library\Repository.MSSQL.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

@@ -14,9 +14,9 @@ namespace Market.ReadModels.Read.Products.QueriesHandler
         IQueryHandler<GetAllProducts,IReadOnlyList<ProductReadModel>>,
         IQueryHandler<GetProducts,IReadOnlyList<ProductReadModel>>
     {
-        private readonly IReadModelRepository<ProductReadModel> _repo;
+        private readonly IReadModelRepository<ProductReadModel,Guid> _repo;
 
-        public ProductQueriesHandler(IReadModelRepository<ProductReadModel> repo)
+        public ProductQueriesHandler(IReadModelRepository<ProductReadModel,Guid> repo)
         {
             _repo = repo;
         }

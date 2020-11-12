@@ -1,8 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "+pqB8Yu7qc9vj/ru4D7w4hi+vz03WA+p1rdeCYo0J2bHxoLhnMBatbWKB0Yuy6lVflAYNXvlJ048Gd9e7LV85A==",
+  "dgSpecHash": "8tY5YGgerIaLu2XpDXhPBbMQpxvoLj0WqCIi5rvhw/ND9VU2zYjc3Pf9Yh9+Wn/wqvU8BbmHWAAVFuhGvxAvuw==",
   "success": true,
   "projectFilePath": "C:\\MarketProject\\MarketProject\\Market.Backend\\Market\\Market.Application\\Market.Application.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.0\\microsoft.aspnetcore.http.features.5.0.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\photosauce.magicscaler\\0.11.2\\photosauce.magicscaler.0.11.2.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\system.io.pipelines\\5.0.0\\system.io.pipelines.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

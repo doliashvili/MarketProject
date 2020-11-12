@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Rxq7zqwsts4Wx3Rj/Gln9pDjInFClrW4T1BWzDa9Qpw9U1YhTmLwx+KxHWpeFjj8RaLZSWv6Ad+9aJK25mE+jg==",
+  "dgSpecHash": "xpRNlx8f6NuKOi+9xiYHeDs2Kp+BEKw8avHxVSwpNiXjbUVuAKfNpIGAqF7k4XkmbB6rl7IFiwKj85EUtwPgEg==",
   "success": true,
   "projectFilePath": "C:\\MarketProject\\MarketProject\\Market.Backend\\Market\\Market.Domain\\Market.Domain.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.0\\microsoft.aspnetcore.http.features.5.0.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\system.io.pipelines\\5.0.0\\system.io.pipelines.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

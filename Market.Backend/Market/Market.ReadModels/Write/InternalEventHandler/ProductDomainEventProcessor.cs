@@ -13,9 +13,9 @@ namespace Market.ReadModels.Write.InternalEventHandler
     public class ProductDomainEventProcessor :
         IInternalEventHandler<CreatedProductEvent>
     {
-        private readonly IReadModelRepository<ProductReadModel> _repo;
+        private readonly IReadModelRepository<ProductReadModel,Guid> _repo;
 
-        public ProductDomainEventProcessor(IReadModelRepository<ProductReadModel> repo)
+        public ProductDomainEventProcessor(IReadModelRepository<ProductReadModel,Guid> repo)
         {
             _repo = repo;
         }
@@ -24,7 +24,7 @@ namespace Market.ReadModels.Write.InternalEventHandler
         {
             var productModel = new ProductReadModel()
             {
-                Id = @event.AggregateId.ToString(),
+                Id = @event.AggregateId,
                 Version = @event.Version,
                 Price = @event.Price,
                 Color = @event.Color,

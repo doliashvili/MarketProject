@@ -7,7 +7,6 @@ C:\MarketProject\MarketProject\Market.Backend\Market\Market.Application\bin\Debu
 C:\MarketProject\MarketProject\Market.Backend\Market\Market.Application\obj\Debug\netcoreapp3.1\Market.Application.csprojAssemblyReference.cache
 C:\MarketProject\MarketProject\Market.Backend\Market\Market.Application\obj\Debug\netcoreapp3.1\Market.Application.AssemblyInfoInputs.cache
 C:\MarketProject\MarketProject\Market.Backend\Market\Market.Application\obj\Debug\netcoreapp3.1\Market.Application.AssemblyInfo.cs
-C:\MarketProject\MarketProject\Market.Backend\Market\Market.Application\obj\Debug\netcoreapp3.1\Market.Application.csproj.CoreCompileInputs.cache
 C:\MarketProject\MarketProject\Market.Backend\Market\Market.Application\obj\Debug\netcoreapp3.1\Market.Application.csproj.CopyComplete
 C:\MarketProject\MarketProject\Market.Backend\Market\Market.Application\obj\Debug\netcoreapp3.1\Market.Application.dll
 C:\MarketProject\MarketProject\Market.Backend\Market\Market.Application\obj\Debug\netcoreapp3.1\Market.Application.pdb

@@ -14,7 +14,7 @@ using Microsoft.EntityFrameworkCore;
 namespace Repository.MSSQL.Concrete
 {
     public class RepositoryMSSQL<TReadModel, TId> : IReadModelRepository<TReadModel, TId>
-    where TReadModel : Entity<TId>, IReadModel<TId>
+    where TReadModel : class, IReadModel<TId>
     where TId : IComparable, IEquatable<TId>
     {
         private readonly DbContext _dbContext;
@@ -123,7 +123,7 @@ namespace Repository.MSSQL.Concrete
 
         public async Task<TReadModel> WriteAsync(TReadModel readModel, CancellationToken cancellationToken = default)
         {
-            await _dbContext.Set<TReadModel>().AddAsync(readModel);
+            await _dbContext.Set<TReadModel>().AddAsync(readModel,cancellationToken);
 
             await SaveChangesAsync(cancellationToken);
 
@@ -145,21 +145,6 @@ namespace Repository.MSSQL.Concrete
 
         private async Task SaveChangesAsync(CancellationToken cancellationToken = default)
         {
-
-            
-            foreach (var entry in _dbContext.ChangeTracker.Entries<AuditableEntity<TId>>())
-            {
-                switch (entry.State)
-                {
-                    case EntityState.Added:
-                        entry.Entity.SetCreationInfo("", DateTime.UtcNow);
-                        break;
-                    case EntityState.Modified:
-                        entry.Entity.UpdateChangeInfo("", DateTime.UtcNow);
-                        break;
-                }
-            }
-
             await _dbContext.SaveChangesAsync(cancellationToken);
         }
 

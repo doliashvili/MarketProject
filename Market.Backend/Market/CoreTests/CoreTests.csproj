@@ -18,11 +18,11 @@
     <Reference Include="Core">
       <HintPath>..\Library\Core.dll</HintPath>
     </Reference>
-    <Reference Include="EventStore.MongoDb">
-      <HintPath>..\Library\EventStore.MongoDb.dll</HintPath>
+    <Reference Include="EventStore.MSSQL">
+      <HintPath>..\Library\EventStore.MSSQL.dll</HintPath>
     </Reference>
-    <Reference Include="ReadModelRepository.RavenDb">
-      <HintPath>..\Library\ReadModelRepository.RavenDb.dll</HintPath>
+    <Reference Include="Repository.MSSQL">
+      <HintPath>..\Library\Repository.MSSQL.dll</HintPath>
     </Reference>
   </ItemGroup>
 
