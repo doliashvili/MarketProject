@@ -1,0 +1,12 @@
+C:\MarketProject\MarketProject\Market.Backend\Market\EventStore.MSSQL\bin\Debug\netcoreapp3.1\EventStore.MSSQL.deps.json
+C:\MarketProject\MarketProject\Market.Backend\Market\EventStore.MSSQL\bin\Debug\netcoreapp3.1\EventStore.MSSQL.dll
+C:\MarketProject\MarketProject\Market.Backend\Market\EventStore.MSSQL\bin\Debug\netcoreapp3.1\EventStore.MSSQL.pdb
+C:\MarketProject\MarketProject\Market.Backend\Market\EventStore.MSSQL\bin\Debug\netcoreapp3.1\Core.dll
+C:\MarketProject\MarketProject\Market.Backend\Market\EventStore.MSSQL\bin\Debug\netcoreapp3.1\Core.pdb
+C:\MarketProject\MarketProject\Market.Backend\Market\EventStore.MSSQL\obj\Debug\netcoreapp3.1\EventStore.MSSQL.csprojAssemblyReference.cache
+C:\MarketProject\MarketProject\Market.Backend\Market\EventStore.MSSQL\obj\Debug\netcoreapp3.1\EventStore.MSSQL.AssemblyInfoInputs.cache
+C:\MarketProject\MarketProject\Market.Backend\Market\EventStore.MSSQL\obj\Debug\netcoreapp3.1\EventStore.MSSQL.AssemblyInfo.cs
+C:\MarketProject\MarketProject\Market.Backend\Market\EventStore.MSSQL\obj\Debug\netcoreapp3.1\EventStore.MSSQL.csproj.CoreCompileInputs.cache
+C:\MarketProject\MarketProject\Market.Backend\Market\EventStore.MSSQL\obj\Debug\netcoreapp3.1\EventStore.MSSQL.csproj.CopyComplete
+C:\MarketProject\MarketProject\Market.Backend\Market\EventStore.MSSQL\obj\Debug\netcoreapp3.1\EventStore.MSSQL.dll
+C:\MarketProject\MarketProject\Market.Backend\Market\EventStore.MSSQL\obj\Debug\netcoreapp3.1\EventStore.MSSQL.pdb

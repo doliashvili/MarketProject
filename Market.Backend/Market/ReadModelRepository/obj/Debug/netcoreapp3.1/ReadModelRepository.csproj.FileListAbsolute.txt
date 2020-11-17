@@ -1,0 +1,15 @@
+C:\MarketProject\MarketProject\Market.Backend\Market\ReadModelRepository\bin\Debug\netcoreapp3.1\ReadModelRepository.deps.json
+C:\MarketProject\MarketProject\Market.Backend\Market\ReadModelRepository\bin\Debug\netcoreapp3.1\ReadModelRepository.dll
+C:\MarketProject\MarketProject\Market.Backend\Market\ReadModelRepository\bin\Debug\netcoreapp3.1\Core.dll
+C:\MarketProject\MarketProject\Market.Backend\Market\ReadModelRepository\bin\Debug\netcoreapp3.1\Core.pdb
+C:\MarketProject\MarketProject\Market.Backend\Market\ReadModelRepository\obj\Debug\netcoreapp3.1\ReadModelRepository.csprojAssemblyReference.cache
+C:\MarketProject\MarketProject\Market.Backend\Market\ReadModelRepository\obj\Debug\netcoreapp3.1\ReadModelRepository.AssemblyInfoInputs.cache
+C:\MarketProject\MarketProject\Market.Backend\Market\ReadModelRepository\obj\Debug\netcoreapp3.1\ReadModelRepository.AssemblyInfo.cs
+C:\MarketProject\MarketProject\Market.Backend\Market\ReadModelRepository\obj\Debug\netcoreapp3.1\ReadModelRepository.csproj.CopyComplete
+C:\MarketProject\MarketProject\Market.Backend\Market\ReadModelRepository\bin\Debug\netcoreapp3.1\ReadModelRepository.pdb
+C:\MarketProject\MarketProject\Market.Backend\Market\ReadModelRepository\obj\Debug\netcoreapp3.1\ReadModelRepository.dll
+C:\MarketProject\MarketProject\Market.Backend\Market\ReadModelRepository\obj\Debug\netcoreapp3.1\ReadModelRepository.pdb
+C:\MarketProject\MarketProject\Market.Backend\Market\ReadModelRepository\bin\Debug\netcoreapp3.1\ReadModelRepository.runtimeconfig.json
+C:\MarketProject\MarketProject\Market.Backend\Market\ReadModelRepository\bin\Debug\netcoreapp3.1\ReadModelRepository.runtimeconfig.dev.json
+C:\MarketProject\MarketProject\Market.Backend\Market\ReadModelRepository\obj\Debug\netcoreapp3.1\ReadModelRepository.genruntimeconfig.cache
+C:\MarketProject\MarketProject\Market.Backend\Market\ReadModelRepository\obj\Debug\netcoreapp3.1\ReadModelRepository.csproj.CoreCompileInputs.cache

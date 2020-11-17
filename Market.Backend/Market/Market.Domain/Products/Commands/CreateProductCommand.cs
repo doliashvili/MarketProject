@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using Core.Commands;
-using Market.Domain.FileManager;
 using Market.Domain.Products.Enums;
 using Market.Domain.Products.ValueObjects;
 using Microsoft.AspNetCore.Http;
+using Newtonsoft.Json;
 
 namespace Market.Domain.Products.Commands
 {
@@ -27,9 +27,9 @@ namespace Market.Domain.Products.Commands
         public DateTime CreateTime { get; private set; }
         public List<Image> Images { get; private set; }
         public DateTime Expiration { get; private set; }
-        public List<IFormFile> IFormFiles { get; private set; }
 
-        public CreateProductCommand(long id,
+        [JsonConstructor]
+        public CreateProductCommand(
             decimal price,
             string color,
             string brand,
@@ -43,7 +43,6 @@ namespace Market.Domain.Products.Commands
             float discount,
             DateTime createTime,
             DateTime expiration,
-            List<IFormFile> formFiles,
             CommandMeta commandMeta,
             long? exceptionVersion=null) : base(commandMeta,exceptionVersion)
         {
@@ -61,12 +60,11 @@ namespace Market.Domain.Products.Commands
             Discount = discount;
             CreateTime = createTime;
             Expiration = expiration;
-            IFormFiles = formFiles;
         }
 
-        public void SetImages(List<Image> images)
+        public CreateProductCommand()
         {
-            Images = images;
+            
         }
 
     }

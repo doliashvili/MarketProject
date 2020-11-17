@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -6,15 +6,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Market.Domain\Market.Domain.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="Core">
-      <HintPath>..\Library\Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Repository.MSSQL">
-      <HintPath>..\Library\Repository.MSSQL.dll</HintPath>
-    </Reference>
   </ItemGroup>
 
 </Project>

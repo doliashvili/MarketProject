@@ -67,8 +67,16 @@ namespace Market.Domain.Products.Entities
             Expiration = e.Expiration;
             Images = e.Images;
         }
-        
 
+        public void Delete(DeleteProductCommand command)
+        {
+            ApplyChange(new DeletedProductEvent(this,command));
+        }
+
+        public void Apply(DeletedProductEvent e)
+        {
+            IsDeleted = true;
+        }
 
         #region ValidationMethods
         private void ValidateDiscount(float discount)

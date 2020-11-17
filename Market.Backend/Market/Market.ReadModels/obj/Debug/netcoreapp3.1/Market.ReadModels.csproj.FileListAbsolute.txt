@@ -11,3 +11,4 @@ C:\MarketProject\MarketProject\Market.Backend\Market\Market.ReadModels\bin\Debug
 C:\MarketProject\MarketProject\Market.Backend\Market\Market.ReadModels\obj\Debug\netcoreapp3.1\Market.ReadModels.csproj.CopyComplete
 C:\MarketProject\MarketProject\Market.Backend\Market\Market.ReadModels\obj\Debug\netcoreapp3.1\Market.ReadModels.dll
 C:\MarketProject\MarketProject\Market.Backend\Market\Market.ReadModels\obj\Debug\netcoreapp3.1\Market.ReadModels.pdb
+C:\MarketProject\MarketProject\Market.Backend\Market\Market.ReadModels\bin\Debug\netcoreapp3.1\Core.pdb

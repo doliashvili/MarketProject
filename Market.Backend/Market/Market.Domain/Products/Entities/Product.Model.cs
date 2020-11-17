@@ -8,6 +8,7 @@ namespace Market.Domain.Products.Entities
     public partial class Product
     {
         public decimal Price { get; private set; }
+        public bool IsDeleted { get; private set; }
         public string Color { get; private set; }
         public string Brand { get; private set; }
         public string ProductType { get; set; }

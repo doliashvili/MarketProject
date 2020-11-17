@@ -1,0 +1,9 @@
+C:\MarketProject\MarketProject\Market.Backend\Market\Core\bin\Debug\netstandard2.1\Core.deps.json
+C:\MarketProject\MarketProject\Market.Backend\Market\Core\bin\Debug\netstandard2.1\Core.dll
+C:\MarketProject\MarketProject\Market.Backend\Market\Core\bin\Debug\netstandard2.1\Core.pdb
+C:\MarketProject\MarketProject\Market.Backend\Market\Core\obj\Debug\netstandard2.1\Core.AssemblyInfoInputs.cache
+C:\MarketProject\MarketProject\Market.Backend\Market\Core\obj\Debug\netstandard2.1\Core.AssemblyInfo.cs
+C:\MarketProject\MarketProject\Market.Backend\Market\Core\obj\Debug\netstandard2.1\Core.csproj.CoreCompileInputs.cache
+C:\MarketProject\MarketProject\Market.Backend\Market\Core\obj\Debug\netstandard2.1\Core.dll
+C:\MarketProject\MarketProject\Market.Backend\Market\Core\obj\Debug\netstandard2.1\Core.pdb
+C:\MarketProject\MarketProject\Market.Backend\Market\Core\obj\Debug\netstandard2.1\Core.csprojAssemblyReference.cache

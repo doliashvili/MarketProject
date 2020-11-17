@@ -11,11 +11,12 @@ using Market.ReadModels.Models;
 namespace Market.ReadModels.Write.InternalEventHandler
 {
     public class ProductDomainEventProcessor :
-        IInternalEventHandler<CreatedProductEvent>
+        IInternalEventHandler<CreatedProductEvent>,
+        IInternalEventHandler<DeletedProductEvent>
     {
-        private readonly IReadModelRepository<ProductReadModel,Guid> _repo;
+        private readonly IReadModelRepository<ProductReadModel, Guid> _repo;
 
-        public ProductDomainEventProcessor(IReadModelRepository<ProductReadModel,Guid> repo)
+        public ProductDomainEventProcessor(IReadModelRepository<ProductReadModel, Guid> repo)
         {
             _repo = repo;
         }
@@ -45,5 +46,9 @@ namespace Market.ReadModels.Write.InternalEventHandler
             await _repo.WriteAsync(productModel, cancellationToken);
         }
 
+        public async Task HandleAsync(DeletedProductEvent @event, CancellationToken cancellationToken = default)
+        {
+            await _repo.DeleteAsync(@event.AggregateId);
+        }
     }
 }

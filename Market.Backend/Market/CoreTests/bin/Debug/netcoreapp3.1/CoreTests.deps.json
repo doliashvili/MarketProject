@@ -13,8 +13,8 @@
           "xunit": "2.4.1",
           "xunit.runner.visualstudio": "2.4.3",
           "Core": "1.0.0.0",
-          "EventStore.MongoDb": "1.0.0.0",
-          "ReadModelRepository.RavenDb": "1.0.0.0"
+          "EventStore.MSSQL": "1.0.0.0",
+          "Repository.MSSQL": "1.0.0.0"
         },
         "runtime": {
           "CoreTests.dll": {}
@@ -1116,17 +1116,17 @@
           }
         }
       },
-      "EventStore.MongoDb/1.0.0.0": {
+      "EventStore.MSSQL/1.0.0.0": {
         "runtime": {
-          "EventStore.MongoDb.dll": {
+          "EventStore.MSSQL.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
       },
-      "ReadModelRepository.RavenDb/1.0.0.0": {
+      "Repository.MSSQL/1.0.0.0": {
         "runtime": {
-          "ReadModelRepository.RavenDb.dll": {
+          "Repository.MSSQL.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -1789,12 +1789,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "EventStore.MongoDb/1.0.0.0": {
+    "EventStore.MSSQL/1.0.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
     },
-    "ReadModelRepository.RavenDb/1.0.0.0": {
+    "Repository.MSSQL/1.0.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
