@@ -12,7 +12,10 @@ namespace Market.ReadModels.Write.InternalEventHandler
 {
     public class ProductDomainEventProcessor :
         IInternalEventHandler<CreatedProductEvent>,
-        IInternalEventHandler<DeletedProductEvent>
+        IInternalEventHandler<DeletedProductEvent>,
+        IInternalEventHandler<ChangedProductNameEvent>,
+        IInternalEventHandler<ChangedProductPriceEvent>
+
     {
         private readonly IReadModelRepository<ProductReadModel, Guid> _repo;
 
@@ -48,7 +51,17 @@ namespace Market.ReadModels.Write.InternalEventHandler
 
         public async Task HandleAsync(DeletedProductEvent @event, CancellationToken cancellationToken = default)
         {
-            await _repo.DeleteAsync(@event.AggregateId);
+            await _repo.DeleteAsync(@event.AggregateId,cancellationToken);
+        }
+
+        public async Task HandleAsync(ChangedProductNameEvent @event, CancellationToken cancellationToken = default)
+        {
+            await _repo.UpdateAsync(@event.AggregateId, x => x.Name = @event.Name,cancellationToken);
+        }
+
+        public async Task HandleAsync(ChangedProductPriceEvent @event, CancellationToken cancellationToken = default)
+        {
+            await _repo.UpdateAsync(@event.AggregateId, x => x.Price = @event.Price,cancellationToken);
         }
     }
 }

@@ -88,7 +88,7 @@ C:\MarketProject\MarketProject\Market.Backend\Market\Market.Api\bin\Debug\netcor
 C:\MarketProject\MarketProject\Market.Backend\Market\Market.Api\bin\Debug\netcoreapp3.1\runtimes\win7-x86\native\sni.dll
 C:\MarketProject\MarketProject\Market.Backend\Market\Market.Api\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netstandard1.3\System.Data.SqlClient.dll
 C:\MarketProject\MarketProject\Market.Backend\Market\Market.Api\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard1.3\System.Data.SqlClient.dll
-C:\MarketProject\MarketProject\Market.Backend\Market\Market.Api\bin\Debug\netcoreapp3.1\ReadModelRepository.dll
 C:\MarketProject\MarketProject\Market.Backend\Market\Market.Api\bin\Debug\netcoreapp3.1\EventStore.MSSQL.pdb
-C:\MarketProject\MarketProject\Market.Backend\Market\Market.Api\bin\Debug\netcoreapp3.1\ReadModelRepository.pdb
 C:\MarketProject\MarketProject\Market.Backend\Market\Market.Api\bin\Debug\netcoreapp3.1\Core.pdb
+C:\MarketProject\MarketProject\Market.Backend\Market\Market.Api\bin\Debug\netcoreapp3.1\ReadModelRepository.MSSQL.dll
+C:\MarketProject\MarketProject\Market.Backend\Market\Market.Api\bin\Debug\netcoreapp3.1\ReadModelRepository.MSSQL.pdb

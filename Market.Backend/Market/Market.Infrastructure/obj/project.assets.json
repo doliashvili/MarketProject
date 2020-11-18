@@ -1473,19 +1473,18 @@
           "bin/placeholder/Market.ReadModels.dll": {}
         }
       },
-      "ReadModelRepository/1.0.0": {
+      "ReadModelRepository.MSSQL/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
           "Core": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "5.0.0",
-          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0"
+          "Microsoft.EntityFrameworkCore": "5.0.0"
         },
         "compile": {
-          "bin/placeholder/ReadModelRepository.dll": {}
+          "bin/placeholder/ReadModelRepository.MSSQL.dll": {}
         },
         "runtime": {
-          "bin/placeholder/ReadModelRepository.dll": {}
+          "bin/placeholder/ReadModelRepository.MSSQL.dll": {}
         }
       }
     }
@@ -5537,10 +5536,10 @@
       "path": "../Market.ReadModels/Market.ReadModels.csproj",
       "msbuildProject": "../Market.ReadModels/Market.ReadModels.csproj"
     },
-    "ReadModelRepository/1.0.0": {
+    "ReadModelRepository.MSSQL/1.0.0": {
       "type": "project",
-      "path": "../ReadModelRepository/ReadModelRepository.csproj",
-      "msbuildProject": "../ReadModelRepository/ReadModelRepository.csproj"
+      "path": "../ReadModelRepository/ReadModelRepository.MSSQL.csproj",
+      "msbuildProject": "../ReadModelRepository/ReadModelRepository.MSSQL.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -5549,7 +5548,7 @@
       "Microsoft.EntityFrameworkCore >= 5.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.0",
-      "ReadModelRepository >= 1.0.0"
+      "ReadModelRepository.MSSQL >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -5585,8 +5584,8 @@
             "C:\\MarketProject\\MarketProject\\Market.Backend\\Market\\Market.ReadModels\\Market.ReadModels.csproj": {
               "projectPath": "C:\\MarketProject\\MarketProject\\Market.Backend\\Market\\Market.ReadModels\\Market.ReadModels.csproj"
             },
-            "C:\\MarketProject\\MarketProject\\Market.Backend\\Market\\ReadModelRepository\\ReadModelRepository.csproj": {
-              "projectPath": "C:\\MarketProject\\MarketProject\\Market.Backend\\Market\\ReadModelRepository\\ReadModelRepository.csproj"
+            "C:\\MarketProject\\MarketProject\\Market.Backend\\Market\\ReadModelRepository\\ReadModelRepository.MSSQL.csproj": {
+              "projectPath": "C:\\MarketProject\\MarketProject\\Market.Backend\\Market\\ReadModelRepository\\ReadModelRepository.MSSQL.csproj"
             }
           }
         }

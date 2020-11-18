@@ -1,0 +1,12 @@
+C:\MarketProject\MarketProject\Market.Backend\Market\ReadModelRepository\bin\Debug\netcoreapp3.1\ReadModelRepository.MSSQL.deps.json
+C:\MarketProject\MarketProject\Market.Backend\Market\ReadModelRepository\bin\Debug\netcoreapp3.1\ReadModelRepository.MSSQL.dll
+C:\MarketProject\MarketProject\Market.Backend\Market\ReadModelRepository\bin\Debug\netcoreapp3.1\Core.dll
+C:\MarketProject\MarketProject\Market.Backend\Market\ReadModelRepository\bin\Debug\netcoreapp3.1\Core.pdb
+C:\MarketProject\MarketProject\Market.Backend\Market\ReadModelRepository\obj\Debug\netcoreapp3.1\ReadModelRepository.MSSQL.csprojAssemblyReference.cache
+C:\MarketProject\MarketProject\Market.Backend\Market\ReadModelRepository\obj\Debug\netcoreapp3.1\ReadModelRepository.MSSQL.AssemblyInfoInputs.cache
+C:\MarketProject\MarketProject\Market.Backend\Market\ReadModelRepository\obj\Debug\netcoreapp3.1\ReadModelRepository.MSSQL.AssemblyInfo.cs
+C:\MarketProject\MarketProject\Market.Backend\Market\ReadModelRepository\obj\Debug\netcoreapp3.1\ReadModelRepository.MSSQL.csproj.CopyComplete
+C:\MarketProject\MarketProject\Market.Backend\Market\ReadModelRepository\bin\Debug\netcoreapp3.1\ReadModelRepository.MSSQL.pdb
+C:\MarketProject\MarketProject\Market.Backend\Market\ReadModelRepository\obj\Debug\netcoreapp3.1\ReadModelRepository.MSSQL.csproj.CoreCompileInputs.cache
+C:\MarketProject\MarketProject\Market.Backend\Market\ReadModelRepository\obj\Debug\netcoreapp3.1\ReadModelRepository.MSSQL.dll
+C:\MarketProject\MarketProject\Market.Backend\Market\ReadModelRepository\obj\Debug\netcoreapp3.1\ReadModelRepository.MSSQL.pdb

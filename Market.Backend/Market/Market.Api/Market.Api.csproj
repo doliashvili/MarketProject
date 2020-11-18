@@ -20,7 +20,7 @@
     <ProjectReference Include="..\Market.Domain\Market.Domain.csproj" />
     <ProjectReference Include="..\Market.Infrastructure\Market.Infrastructure.csproj" />
     <ProjectReference Include="..\Market.ReadModels\Market.ReadModels.csproj" />
-    <ProjectReference Include="..\ReadModelRepository\ReadModelRepository.csproj" />
+    <ProjectReference Include="..\ReadModelRepository\ReadModelRepository.MSSQL.csproj" />
   </ItemGroup>
 
 </Project>

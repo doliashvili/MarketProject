@@ -4,6 +4,7 @@ using ReadModelRepository;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using ReadModelRepository.MSSQL;
 
 namespace Market.Infrastructure.Data
 {

@@ -78,6 +78,27 @@ namespace Market.Domain.Products.Entities
             IsDeleted = true;
         }
 
+        public void ChangeProductName(ChangeProductNameCommand command)
+        {
+            ApplyChange(new ChangedProductNameEvent(command.Name,this,command));
+        }
+
+        public void Apply(ChangedProductNameEvent e)
+        {
+            Name = e.Name;
+        }
+
+        public void ChangeProductPrice(ChangeProductPriceCommand command)
+        {
+            ValidatePrice(command.Price);
+            ApplyChange(new ChangedProductPriceEvent(command.Price,this,command));
+        }
+
+        public void Apply(ChangedProductPriceEvent e)
+        {
+            Price = e.Price;
+        }
+
         #region ValidationMethods
         private void ValidateDiscount(float discount)
         {

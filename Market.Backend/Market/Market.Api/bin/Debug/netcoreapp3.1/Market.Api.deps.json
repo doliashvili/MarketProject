@@ -31,7 +31,7 @@
           "Market.ReadModels": "1.0.0",
           "Microsoft.EntityFrameworkCore.Design": "5.0.0",
           "Newtonsoft.Json": "12.0.3",
-          "ReadModelRepository": "1.0.0",
+          "ReadModelRepository.MSSQL": "1.0.0",
           "Swashbuckle.AspNetCore": "5.6.3",
           "Swashbuckle.AspNetCore.Newtonsoft": "5.6.3",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
@@ -1907,7 +1907,7 @@
           "Market.ReadModels": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0",
-          "ReadModelRepository": "1.0.0"
+          "ReadModelRepository.MSSQL": "1.0.0"
         },
         "runtime": {
           "Market.Infrastructure.dll": {}
@@ -1927,17 +1927,16 @@
           "Market.ReadModels.dll": {}
         }
       },
-      "ReadModelRepository/1.0.0": {
+      "ReadModelRepository.MSSQL/1.0.0": {
         "dependencies": {
           "Core": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "5.0.0",
-          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0"
+          "Microsoft.EntityFrameworkCore": "5.0.0"
         },
         "runtime": {
-          "ReadModelRepository.dll": {}
+          "ReadModelRepository.MSSQL.dll": {}
         },
         "compile": {
-          "ReadModelRepository.dll": {}
+          "ReadModelRepository.MSSQL.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
@@ -4601,7 +4600,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "ReadModelRepository/1.0.0": {
+    "ReadModelRepository.MSSQL/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

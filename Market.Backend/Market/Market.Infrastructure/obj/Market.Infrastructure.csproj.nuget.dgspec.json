@@ -167,8 +167,8 @@
               "C:\\MarketProject\\MarketProject\\Market.Backend\\Market\\Market.ReadModels\\Market.ReadModels.csproj": {
                 "projectPath": "C:\\MarketProject\\MarketProject\\Market.Backend\\Market\\Market.ReadModels\\Market.ReadModels.csproj"
               },
-              "C:\\MarketProject\\MarketProject\\Market.Backend\\Market\\ReadModelRepository\\ReadModelRepository.csproj": {
-                "projectPath": "C:\\MarketProject\\MarketProject\\Market.Backend\\Market\\ReadModelRepository\\ReadModelRepository.csproj"
+              "C:\\MarketProject\\MarketProject\\Market.Backend\\Market\\ReadModelRepository\\ReadModelRepository.MSSQL.csproj": {
+                "projectPath": "C:\\MarketProject\\MarketProject\\Market.Backend\\Market\\ReadModelRepository\\ReadModelRepository.MSSQL.csproj"
               }
             }
           }
@@ -275,12 +275,12 @@
         }
       }
     },
-    "C:\\MarketProject\\MarketProject\\Market.Backend\\Market\\ReadModelRepository\\ReadModelRepository.csproj": {
+    "C:\\MarketProject\\MarketProject\\Market.Backend\\Market\\ReadModelRepository\\ReadModelRepository.MSSQL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\MarketProject\\MarketProject\\Market.Backend\\Market\\ReadModelRepository\\ReadModelRepository.csproj",
-        "projectName": "ReadModelRepository",
-        "projectPath": "C:\\MarketProject\\MarketProject\\Market.Backend\\Market\\ReadModelRepository\\ReadModelRepository.csproj",
+        "projectUniqueName": "C:\\MarketProject\\MarketProject\\Market.Backend\\Market\\ReadModelRepository\\ReadModelRepository.MSSQL.csproj",
+        "projectName": "ReadModelRepository.MSSQL",
+        "projectPath": "C:\\MarketProject\\MarketProject\\Market.Backend\\Market\\ReadModelRepository\\ReadModelRepository.MSSQL.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
         "outputPath": "C:\\MarketProject\\MarketProject\\Market.Backend\\Market\\ReadModelRepository\\obj\\",
         "projectStyle": "PackageReference",
@@ -317,16 +317,6 @@
         "netcoreapp3.1": {
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[5.0.0, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[5.0.0, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
               "target": "Package",
               "version": "[5.0.0, )"
             }

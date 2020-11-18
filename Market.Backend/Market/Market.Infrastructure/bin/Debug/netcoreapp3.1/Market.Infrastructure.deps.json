@@ -12,7 +12,7 @@
           "Microsoft.EntityFrameworkCore": "5.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0",
           "Microsoft.EntityFrameworkCore.Tools": "5.0.0",
-          "ReadModelRepository": "1.0.0"
+          "ReadModelRepository.MSSQL": "1.0.0"
         },
         "runtime": {
           "Market.Infrastructure.dll": {}
@@ -1047,14 +1047,13 @@
           "Market.ReadModels.dll": {}
         }
       },
-      "ReadModelRepository/1.0.0": {
+      "ReadModelRepository.MSSQL/1.0.0": {
         "dependencies": {
           "Core": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "5.0.0",
-          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0"
+          "Microsoft.EntityFrameworkCore": "5.0.0"
         },
         "runtime": {
-          "ReadModelRepository.dll": {}
+          "ReadModelRepository.MSSQL.dll": {}
         }
       }
     }
@@ -1745,7 +1744,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "ReadModelRepository/1.0.0": {
+    "ReadModelRepository.MSSQL/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

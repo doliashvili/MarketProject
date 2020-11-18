@@ -17,11 +17,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreTests", "CoreTests\Core
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Market.Infrastructure", "Market.Infrastructure\Market.Infrastructure.csproj", "{105E1247-3514-41C5-8098-6B87B06F71F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{7ECCB601-DD45-4427-ABF8-A60B40613513}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "Core\Core.csproj", "{7ECCB601-DD45-4427-ABF8-A60B40613513}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventStore.MSSQL", "EventStore.MSSQL\EventStore.MSSQL.csproj", "{027D02DD-9AA0-4156-A25C-69A7A1125991}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventStore.MSSQL", "EventStore.MSSQL\EventStore.MSSQL.csproj", "{027D02DD-9AA0-4156-A25C-69A7A1125991}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadModelRepository", "ReadModelRepository\ReadModelRepository.csproj", "{9AEA88B0-9614-4291-9142-F0EC7F89CA92}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReadModelRepository.MSSQL", "ReadModelRepository\ReadModelRepository.MSSQL.csproj", "{9AEA88B0-9614-4291-9142-F0EC7F89CA92}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

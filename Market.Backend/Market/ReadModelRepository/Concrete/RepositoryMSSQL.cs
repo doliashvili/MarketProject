@@ -1,5 +1,4 @@
-﻿using Core.Repository;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
@@ -7,9 +6,10 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Core.Queries;
+using Core.Repository;
 using Microsoft.EntityFrameworkCore;
 
-namespace ReadModelRepository.Concrete
+namespace ReadModelRepository.MSSQL.Concrete
 {
     public class RepositoryMSSQL<TReadModel, TId> : IReadModelRepository<TReadModel, TId>
     where TReadModel : class, IReadModel<TId>
@@ -107,7 +107,7 @@ namespace ReadModelRepository.Concrete
 
         public async Task<TReadModel> UpdateAsync(TId id, Action<TReadModel> action, CancellationToken cancellationToken = default)
         {
-            var entity = await _dbContext.Set<TReadModel>().FindAsync(id, cancellationToken);
+            var entity = await _dbContext.Set<TReadModel>().FirstOrDefaultAsync(x=> x.Id.Equals(id), cancellationToken);
             if (entity == null)
             {
                 return default;

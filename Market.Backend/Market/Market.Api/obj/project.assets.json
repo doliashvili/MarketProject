@@ -2323,7 +2323,7 @@
           "Market.ReadModels": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0",
-          "ReadModelRepository": "1.0.0"
+          "ReadModelRepository.MSSQL": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Market.Infrastructure.dll": {}
@@ -2345,19 +2345,18 @@
           "bin/placeholder/Market.ReadModels.dll": {}
         }
       },
-      "ReadModelRepository/1.0.0": {
+      "ReadModelRepository.MSSQL/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
           "Core": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "5.0.0",
-          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0"
+          "Microsoft.EntityFrameworkCore": "5.0.0"
         },
         "compile": {
-          "bin/placeholder/ReadModelRepository.dll": {}
+          "bin/placeholder/ReadModelRepository.MSSQL.dll": {}
         },
         "runtime": {
-          "bin/placeholder/ReadModelRepository.dll": {}
+          "bin/placeholder/ReadModelRepository.MSSQL.dll": {}
         }
       }
     }
@@ -7724,10 +7723,10 @@
       "path": "../Market.ReadModels/Market.ReadModels.csproj",
       "msbuildProject": "../Market.ReadModels/Market.ReadModels.csproj"
     },
-    "ReadModelRepository/1.0.0": {
+    "ReadModelRepository.MSSQL/1.0.0": {
       "type": "project",
-      "path": "../ReadModelRepository/ReadModelRepository.csproj",
-      "msbuildProject": "../ReadModelRepository/ReadModelRepository.csproj"
+      "path": "../ReadModelRepository/ReadModelRepository.MSSQL.csproj",
+      "msbuildProject": "../ReadModelRepository/ReadModelRepository.MSSQL.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -7739,7 +7738,7 @@
       "Market.ReadModels >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.0",
       "Newtonsoft.Json >= 12.0.3",
-      "ReadModelRepository >= 1.0.0",
+      "ReadModelRepository.MSSQL >= 1.0.0",
       "Swashbuckle.AspNetCore >= 5.6.3",
       "Swashbuckle.AspNetCore.Newtonsoft >= 5.6.3"
     ]
@@ -7789,8 +7788,8 @@
             "C:\\MarketProject\\MarketProject\\Market.Backend\\Market\\Market.ReadModels\\Market.ReadModels.csproj": {
               "projectPath": "C:\\MarketProject\\MarketProject\\Market.Backend\\Market\\Market.ReadModels\\Market.ReadModels.csproj"
             },
-            "C:\\MarketProject\\MarketProject\\Market.Backend\\Market\\ReadModelRepository\\ReadModelRepository.csproj": {
-              "projectPath": "C:\\MarketProject\\MarketProject\\Market.Backend\\Market\\ReadModelRepository\\ReadModelRepository.csproj"
+            "C:\\MarketProject\\MarketProject\\Market.Backend\\Market\\ReadModelRepository\\ReadModelRepository.MSSQL.csproj": {
+              "projectPath": "C:\\MarketProject\\MarketProject\\Market.Backend\\Market\\ReadModelRepository\\ReadModelRepository.MSSQL.csproj"
             }
           }
         }

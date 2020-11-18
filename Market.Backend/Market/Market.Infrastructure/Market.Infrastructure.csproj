@@ -15,7 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Market.ReadModels\Market.ReadModels.csproj" />
-    <ProjectReference Include="..\ReadModelRepository\ReadModelRepository.csproj" />
+    <ProjectReference Include="..\ReadModelRepository\ReadModelRepository.MSSQL.csproj" />
   </ItemGroup>
 
 </Project>

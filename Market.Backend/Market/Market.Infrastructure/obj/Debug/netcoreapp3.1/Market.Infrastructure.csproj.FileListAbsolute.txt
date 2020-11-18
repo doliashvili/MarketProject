@@ -17,5 +17,5 @@ C:\MarketProject\MarketProject\Market.Backend\Market\Market.Infrastructure\obj\D
 C:\MarketProject\MarketProject\Market.Backend\Market\Market.Infrastructure\obj\Debug\netcoreapp3.1\Market.Infrastructure.pdb
 C:\MarketProject\MarketProject\Market.Backend\Market\Market.Infrastructure\obj\Debug\netcoreapp3.1\Market.Infrastructure.genruntimeconfig.cache
 C:\MarketProject\MarketProject\Market.Backend\Market\Market.Infrastructure\bin\Debug\netcoreapp3.1\Core.pdb
-C:\MarketProject\MarketProject\Market.Backend\Market\Market.Infrastructure\bin\Debug\netcoreapp3.1\ReadModelRepository.dll
-C:\MarketProject\MarketProject\Market.Backend\Market\Market.Infrastructure\bin\Debug\netcoreapp3.1\ReadModelRepository.pdb
+C:\MarketProject\MarketProject\Market.Backend\Market\Market.Infrastructure\bin\Debug\netcoreapp3.1\ReadModelRepository.MSSQL.dll
+C:\MarketProject\MarketProject\Market.Backend\Market\Market.Infrastructure\bin\Debug\netcoreapp3.1\ReadModelRepository.MSSQL.pdb

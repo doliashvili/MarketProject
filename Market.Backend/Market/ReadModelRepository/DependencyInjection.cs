@@ -2,11 +2,10 @@
 using System.Linq;
 using Core.Common;
 using Core.Repository;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using ReadModelRepository.Concrete;
+using ReadModelRepository.MSSQL.Concrete;
 
-namespace ReadModelRepository
+namespace ReadModelRepository.MSSQL
 {
     public static class DependencyInjection
     {
