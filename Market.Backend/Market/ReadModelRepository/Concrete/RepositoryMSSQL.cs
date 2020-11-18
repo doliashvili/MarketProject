@@ -29,12 +29,12 @@ namespace ReadModelRepository.MSSQL.Concrete
 
         public async Task<long> CountAsync(Expression<Func<TReadModel, bool>> expression, CancellationToken cancellationToken = default)
         {
-            return await _dbContext.Set<TReadModel>().CountAsync(expression,cancellationToken);
+            return await _dbContext.Set<TReadModel>().CountAsync(expression, cancellationToken);
         }
 
         public async Task DeleteAsync(TId id, CancellationToken cancellationToken = default)
         {
-            var entity = await _dbContext.Set<TReadModel>().FirstOrDefaultAsync(x=> x.Id.Equals(id), cancellationToken);
+            var entity = await _dbContext.Set<TReadModel>().FirstOrDefaultAsync(x => x.Id.Equals(id), cancellationToken);
             if (null != entity)
             {
                 _dbContext.Set<TReadModel>().Remove(entity);
@@ -51,7 +51,7 @@ namespace ReadModelRepository.MSSQL.Concrete
 
         public async Task<TReadModel> GetByIdAsync(TId id, CancellationToken cancellationToken = default)
         {
-            var entity = await _dbContext.Set<TReadModel>().FindAsync(id,cancellationToken);
+            var entity = await _dbContext.Set<TReadModel>().FirstOrDefaultAsync(x => x.Id.Equals(id), cancellationToken);
 
             if (entity == null)
             {
@@ -63,7 +63,7 @@ namespace ReadModelRepository.MSSQL.Concrete
 
         public async Task<TReadModel> GetFirstOrDefaultAsync(Expression<Func<TReadModel, bool>> selector, CancellationToken cancellationToken = default)
         {
-            var entity = await _dbContext.Set<TReadModel>().FirstOrDefaultAsync(selector,cancellationToken);
+            var entity = await _dbContext.Set<TReadModel>().FirstOrDefaultAsync(selector, cancellationToken);
             return entity;
         }
 
@@ -77,20 +77,20 @@ namespace ReadModelRepository.MSSQL.Concrete
             return _dbContext.Set<TReadModel>().Where(filter);
         }
 
-        public async Task<IReadOnlyList<TReadModel>> QueryListAsync(Expression<Func<TReadModel, bool>> filter = null, int page = 0, int pageSize = 10, CancellationToken cancellationToken = default)
+        public async Task<IReadOnlyList<TReadModel>> QueryListAsync(Expression<Func<TReadModel, bool>> filter = null, int page = 1, int pageSize = 10, CancellationToken cancellationToken = default)
         {
-            if (filter!=null)
+            if (filter != null)
             {
                 return await _dbContext.Set<TReadModel>()
                     ?.Where(filter)
-                    ?.Skip(page * pageSize)
+                    ?.Skip((page - 1) * pageSize)
                     ?.Take(pageSize)
                     ?.AsNoTracking()
                     .ToListAsync(cancellationToken);
             }
 
             return await _dbContext.Set<TReadModel>()
-                ?.Skip(page * pageSize)
+                ?.Skip((page - 1) * pageSize)
                 ?.Take(pageSize)
                 ?.AsNoTracking()
                 .ToListAsync(cancellationToken);
@@ -107,7 +107,7 @@ namespace ReadModelRepository.MSSQL.Concrete
 
         public async Task<TReadModel> UpdateAsync(TId id, Action<TReadModel> action, CancellationToken cancellationToken = default)
         {
-            var entity = await _dbContext.Set<TReadModel>().FirstOrDefaultAsync(x=> x.Id.Equals(id), cancellationToken);
+            var entity = await _dbContext.Set<TReadModel>().FirstOrDefaultAsync(x => x.Id.Equals(id), cancellationToken);
             if (entity == null)
             {
                 return default;
@@ -121,7 +121,7 @@ namespace ReadModelRepository.MSSQL.Concrete
 
         public async Task<TReadModel> WriteAsync(TReadModel readModel, CancellationToken cancellationToken = default)
         {
-            await _dbContext.Set<TReadModel>().AddAsync(readModel,cancellationToken);
+            await _dbContext.Set<TReadModel>().AddAsync(readModel, cancellationToken);
 
             await SaveChangesAsync(cancellationToken);
 
