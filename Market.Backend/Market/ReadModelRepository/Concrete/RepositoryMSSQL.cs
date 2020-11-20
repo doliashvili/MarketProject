@@ -22,12 +22,12 @@ namespace ReadModelRepository.MSSQL.Concrete
             _dbContext = dbContext;
         }
 
-        public async Task<long> CountAsync(CancellationToken cancellationToken = default)
+        public async Task<int> CountAsync(CancellationToken cancellationToken = default)
         {
             return await _dbContext.Set<TReadModel>().CountAsync(cancellationToken);
         }
 
-        public async Task<long> CountAsync(Expression<Func<TReadModel, bool>> expression, CancellationToken cancellationToken = default)
+        public async Task<int> CountAsync(Expression<Func<TReadModel, bool>> expression, CancellationToken cancellationToken = default)
         {
             return await _dbContext.Set<TReadModel>().CountAsync(expression, cancellationToken);
         }

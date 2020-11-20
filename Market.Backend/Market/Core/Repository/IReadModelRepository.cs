@@ -27,8 +27,8 @@ namespace Core.Repository
             CancellationToken cancellationToken = default);
         IQueryable<TReadModel> GetQueryable();
         IQueryable<TReadModel> GetQueryable(Expression<Func<TReadModel, bool>> filter);
-        Task<long> CountAsync(CancellationToken cancellationToken = default);
-        Task<long> CountAsync(Expression<Func<TReadModel, bool>> expression,
+        Task<int> CountAsync(CancellationToken cancellationToken = default);
+        Task<int> CountAsync(Expression<Func<TReadModel, bool>> expression,
             CancellationToken cancellationToken = default);
     }
 }

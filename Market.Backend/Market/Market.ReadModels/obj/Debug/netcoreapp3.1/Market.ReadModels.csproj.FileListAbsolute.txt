@@ -1,7 +1,6 @@
 C:\MarketProject\MarketProject\Market.Backend\Market\Market.ReadModels\obj\Debug\netcoreapp3.1\Market.ReadModels.csprojAssemblyReference.cache
 C:\MarketProject\MarketProject\Market.Backend\Market\Market.ReadModels\obj\Debug\netcoreapp3.1\Market.ReadModels.AssemblyInfoInputs.cache
 C:\MarketProject\MarketProject\Market.Backend\Market\Market.ReadModels\obj\Debug\netcoreapp3.1\Market.ReadModels.AssemblyInfo.cs
-C:\MarketProject\MarketProject\Market.Backend\Market\Market.ReadModels\obj\Debug\netcoreapp3.1\Market.ReadModels.csproj.CoreCompileInputs.cache
 C:\MarketProject\MarketProject\Market.Backend\Market\Market.ReadModels\bin\Debug\netcoreapp3.1\Market.ReadModels.deps.json
 C:\MarketProject\MarketProject\Market.Backend\Market\Market.ReadModels\bin\Debug\netcoreapp3.1\Market.ReadModels.dll
 C:\MarketProject\MarketProject\Market.Backend\Market\Market.ReadModels\bin\Debug\netcoreapp3.1\Market.ReadModels.pdb
@@ -12,3 +11,4 @@ C:\MarketProject\MarketProject\Market.Backend\Market\Market.ReadModels\obj\Debug
 C:\MarketProject\MarketProject\Market.Backend\Market\Market.ReadModels\obj\Debug\netcoreapp3.1\Market.ReadModels.dll
 C:\MarketProject\MarketProject\Market.Backend\Market\Market.ReadModels\obj\Debug\netcoreapp3.1\Market.ReadModels.pdb
 C:\MarketProject\MarketProject\Market.Backend\Market\Market.ReadModels\bin\Debug\netcoreapp3.1\Core.pdb
+C:\MarketProject\MarketProject\Market.Backend\Market\Market.ReadModels\obj\Debug\netcoreapp3.1\Market.ReadModels.csproj.CoreCompileInputs.cache

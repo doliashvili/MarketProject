@@ -6,4 +6,3 @@ C:\MarketProject\MarketProject\Market.Backend\Market\Core\obj\Debug\netstandard2
 C:\MarketProject\MarketProject\Market.Backend\Market\Core\obj\Debug\netstandard2.1\Core.csproj.CoreCompileInputs.cache
 C:\MarketProject\MarketProject\Market.Backend\Market\Core\obj\Debug\netstandard2.1\Core.dll
 C:\MarketProject\MarketProject\Market.Backend\Market\Core\obj\Debug\netstandard2.1\Core.pdb
-C:\MarketProject\MarketProject\Market.Backend\Market\Core\obj\Debug\netstandard2.1\Core.csprojAssemblyReference.cache

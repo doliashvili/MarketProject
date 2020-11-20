@@ -5,7 +5,7 @@ using Core.Queries;
 
 namespace Market.ReadModels.Read.Products.Queries
 {
-    public class GetAllProductCount : IQuery<long>
+    public class GetAllProductCount : IQuery<int>
     {
 
     }
