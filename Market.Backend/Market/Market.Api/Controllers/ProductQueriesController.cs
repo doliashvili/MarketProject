@@ -20,38 +20,38 @@ namespace Market.Api.Controllers
         [HttpGet("[action]")]
         public async Task<IActionResult> GetAllProduct(GetAllProducts query)
         {
-             var products = await _queryProcessor.QueryAsync<IReadOnlyList<ProductReadModel>>(query);
-             return Ok(products);
+            var products = await _queryProcessor.QueryAsync(query);
+            return Ok(products);
         }
 
         [HttpGet("[action]")]
         public async Task<IActionResult> GetPageProduct(GetProducts query)
         {
-            var productsForPageAndCountAll = await _queryProcessor.QueryAsync<(IReadOnlyList<ProductReadModel> page, int pageCount)>(query);
-            return Ok(productsForPageAndCountAll);
+            var (pageValue, allValueCount) = await _queryProcessor.QueryAsync(query);
+            return Ok(new { pageValue, allValueCount });
         }
 
         [HttpGet("[action]")]
         public async Task<IActionResult> GetProductById(GetProductById query)
         {
-            var product = await _queryProcessor.QueryAsync<ProductReadModel>(query);
+            var product = await _queryProcessor.QueryAsync(query);
             return Ok(product);
         }
 
         [HttpGet("[action]")]
         public async Task<IActionResult> GetAllProductCount(GetAllProductCount query)
         {
-            var count = await _queryProcessor.QueryAsync<int>(query);
+            var count = await _queryProcessor.QueryAsync(query);
             return Ok(count);
         }
 
         [HttpGet("[action]")]
-        //todo fix problem i can see item1 and item2 i cannot see page and pageCount field
-        [ProducesResponseType(typeof((IReadOnlyList<ProductReadModel> page, int pageCount)), 200)]
         public async Task<IActionResult> GetFilteredProductPage(GetFilteredProducts query)
         {
-            var productsForPageAndCountAll = await _queryProcessor.QueryAsync<(IReadOnlyList<ProductReadModel> page, int pageCount)>(query);
-            return Ok(productsForPageAndCountAll);
+            var (pageValue, allValueCount) = await _queryProcessor.QueryAsync(query);
+            return Ok(new { pageValue, allValueCount });
         }
+
+
     }
 }
