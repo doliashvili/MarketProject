@@ -99,3 +99,4 @@ C:\MarketProject\MarketProject\Market.Backend\Market\CoreTests\obj\Debug\netcore
 C:\MarketProject\MarketProject\Market.Backend\Market\CoreTests\obj\Debug\netcoreapp3.1\CoreTests.pdb
 C:\MarketProject\MarketProject\Market.Backend\Market\CoreTests\bin\Debug\netcoreapp3.1\EventStore.MSSQL.dll
 C:\MarketProject\MarketProject\Market.Backend\Market\CoreTests\bin\Debug\netcoreapp3.1\Repository.MSSQL.dll
+C:\MarketProject\MarketProject\Market.Backend\Market\CoreTests\obj\Debug\netcoreapp3.1\CoreTests.csprojAssemblyReference.cache

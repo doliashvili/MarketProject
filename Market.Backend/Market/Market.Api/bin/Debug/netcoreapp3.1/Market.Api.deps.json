@@ -310,6 +310,17 @@
           "Market.Api.dll": {}
         }
       },
+      "CloudinaryDotNet/1.13.2": {
+        "runtime": {
+          "lib/netstandard1.3/CloudinaryDotNet.dll": {
+            "assemblyVersion": "1.13.2.0",
+            "fileVersion": "1.13.2.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard1.3/CloudinaryDotNet.dll": {}
+        }
+      },
       "Dapper/2.0.35": {
         "dependencies": {
           "System.Reflection.Emit.Lightweight": "4.7.0"
@@ -1878,6 +1889,7 @@
       },
       "Market.Application/1.0.0": {
         "dependencies": {
+          "CloudinaryDotNet": "1.13.2",
           "Market.Domain": "1.0.0",
           "Microsoft.Extensions.Configuration.Abstractions": "5.0.0",
           "PhotoSauce.MagicScaler": "0.11.2"
@@ -3554,6 +3566,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "CloudinaryDotNet/1.13.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-JhtiKdPRZhO4Faa4jIthbfYCsHGiAQEswALo1xte5HhDzhFHobAjH/BrU1djP6PfyT0raDg1tc3LcSL6VX2ULw==",
+      "path": "cloudinarydotnet/1.13.2",
+      "hashPath": "cloudinarydotnet.1.13.2.nupkg.sha512"
     },
     "Dapper/2.0.35": {
       "type": "package",

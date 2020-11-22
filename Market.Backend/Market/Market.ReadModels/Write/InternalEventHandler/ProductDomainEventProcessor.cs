@@ -14,8 +14,12 @@ namespace Market.ReadModels.Write.InternalEventHandler
         IInternalEventHandler<CreatedProductEvent>,
         IInternalEventHandler<DeletedProductEvent>,
         IInternalEventHandler<ChangedProductNameEvent>,
-        IInternalEventHandler<ChangedProductPriceEvent>
-
+        IInternalEventHandler<ChangedProductPriceEvent>,
+        IInternalEventHandler<ChangedProductBrandEvent>,
+        IInternalEventHandler<ChangedProductColorEvent>,
+        IInternalEventHandler<ChangedProductTypeEvent>,
+        IInternalEventHandler<ChangedProductDiscountEvent>,
+        IInternalEventHandler<AddedProductImageEvent>
     {
         private readonly IReadModelRepository<ProductReadModel, Guid> _repo;
 
@@ -51,17 +55,42 @@ namespace Market.ReadModels.Write.InternalEventHandler
 
         public async Task HandleAsync(DeletedProductEvent @event, CancellationToken cancellationToken = default)
         {
-            await _repo.DeleteAsync(@event.AggregateId,cancellationToken);
+            await _repo.DeleteAsync(@event.AggregateId, cancellationToken);
         }
 
         public async Task HandleAsync(ChangedProductNameEvent @event, CancellationToken cancellationToken = default)
         {
-            await _repo.UpdateAsync(@event.AggregateId, x => x.Name = @event.Name,cancellationToken);
+            await _repo.UpdateAsync(@event.AggregateId, x => x.Name = @event.Name, cancellationToken);
         }
 
         public async Task HandleAsync(ChangedProductPriceEvent @event, CancellationToken cancellationToken = default)
         {
-            await _repo.UpdateAsync(@event.AggregateId, x => x.Price = @event.Price,cancellationToken);
+            await _repo.UpdateAsync(@event.AggregateId, x => x.Price = @event.Price, cancellationToken);
+        }
+
+        public async Task HandleAsync(ChangedProductBrandEvent @event, CancellationToken cancellationToken = default)
+        {
+            await _repo.UpdateAsync(@event.AggregateId, x => x.Brand = @event.Brand, cancellationToken);
+        }
+
+        public async Task HandleAsync(ChangedProductColorEvent @event, CancellationToken cancellationToken = default)
+        {
+            await _repo.UpdateAsync(@event.AggregateId, x => x.Color = @event.Color, cancellationToken);
+        }
+
+        public async Task HandleAsync(ChangedProductTypeEvent @event, CancellationToken cancellationToken = default)
+        {
+            await _repo.UpdateAsync(@event.AggregateId, x => x.ProductType = @event.ProductType, cancellationToken);
+        }
+
+        public async Task HandleAsync(ChangedProductDiscountEvent @event, CancellationToken cancellationToken = default)
+        {
+            await _repo.UpdateAsync(@event.AggregateId, x => x.Discount = @event.Discount, cancellationToken);
+        }
+
+        public async Task HandleAsync(AddedProductImageEvent @event, CancellationToken cancellationToken = default)
+        {
+            await _repo.UpdateAsync(@event.AggregateId, x => x.Images.AddRange(@event.Images), cancellationToken);
         }
     }
 }

@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "N2hnXBNgMgEqlxQUQxajHv8TrNefoooKDxc77Id/Ikvl6UCZTK3ER/WQrAjU978vOI7thXI+xp6VcjpyMmW0hw==",
+  "dgSpecHash": "GuVIFWq5+Qtxk4TdWXvZtNVuU5YpA6MP7YIxKyyz7OEFjqgPLRBDklwIHCcHhcOP6zcx4zoyzwzzK+DEqjYfJg==",
   "success": true,
   "projectFilePath": "C:\\MarketProject\\MarketProject\\Market.Backend\\Market\\Market.Api\\Market.Api.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\cloudinarydotnet\\1.13.2\\cloudinarydotnet.1.13.2.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\dapper\\2.0.35\\dapper.2.0.35.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.0\\microsoft.aspnetcore.http.features.5.0.0.nupkg.sha512",

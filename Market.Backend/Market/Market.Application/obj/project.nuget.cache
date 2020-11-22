@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "OVfuARPoXZiRLf2Ar/BNA6m+J4Ca4lA32Q10NeaQG4CagYFW2yKnV+p9K4GOPiXxXIWA++6cVe3VlnpS0PPQtQ==",
+  "dgSpecHash": "UyiWu6PCJrJDZ16kVEXTBgi5tVE6XaWFBcdH98M6kQCBPXi0MVkrgilBJldsOkob6fxscxuUx3kBSHA0c5Es+A==",
   "success": true,
   "projectFilePath": "C:\\MarketProject\\MarketProject\\Market.Backend\\Market\\Market.Application\\Market.Application.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\cloudinarydotnet\\1.13.2\\cloudinarydotnet.1.13.2.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.0\\microsoft.aspnetcore.http.features.5.0.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.9\\microsoft.extensions.dependencyinjection.abstractions.3.1.9.nupkg.sha512",

@@ -16,7 +16,7 @@ namespace Market.Domain.Products.Entities
         public string Name { get; private set; }
         public string Description { get; private set; }
         public Gender Gender { get; private set; }
-        public bool ForBaby { get; private set; }
+        public bool? ForBaby { get; private set; }
         public string Size { get; private set; }
         public float Discount { get; private set; }
         public decimal DiscountPrice => (Price - (Price * (decimal)Discount));

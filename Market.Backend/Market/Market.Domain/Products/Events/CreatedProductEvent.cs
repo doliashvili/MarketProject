@@ -18,7 +18,7 @@ namespace Market.Domain.Products.Events
         public string Name { get; private set; }
         public string Description { get; private set; }
         public Gender Gender { get; private set; }
-        public bool ForBaby { get; private set; }
+        public bool? ForBaby { get; private set; }
         public string Size { get; private set; }
         public float Discount { get; private set; }
         public DateTime CreateTime { get; private set; }
@@ -35,7 +35,7 @@ namespace Market.Domain.Products.Events
             string name,
             string description,
             Gender gender,
-            bool forBaby,
+            bool? forBaby,
             string size, 
             float discount,
             DateTime createTime,

@@ -19,7 +19,7 @@ namespace Market.ReadModels.Models
         public string Name { get; set; }
         public string Description { get; set; }
         public Gender Gender { get; set; }
-        public bool ForBaby { get; set; }
+        public bool? ForBaby { get; set; }
         public string Size { get; set; }
         public float Discount { get; set; }
         public decimal DiscountPrice => (Price - (Price * (decimal)Discount));

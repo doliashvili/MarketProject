@@ -92,3 +92,4 @@ C:\MarketProject\MarketProject\Market.Backend\Market\Market.Api\bin\Debug\netcor
 C:\MarketProject\MarketProject\Market.Backend\Market\Market.Api\bin\Debug\netcoreapp3.1\Core.pdb
 C:\MarketProject\MarketProject\Market.Backend\Market\Market.Api\bin\Debug\netcoreapp3.1\ReadModelRepository.MSSQL.dll
 C:\MarketProject\MarketProject\Market.Backend\Market\Market.Api\bin\Debug\netcoreapp3.1\ReadModelRepository.MSSQL.pdb
+C:\MarketProject\MarketProject\Market.Backend\Market\Market.Api\bin\Debug\netcoreapp3.1\CloudinaryDotNet.dll

@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
+      "CloudinaryDotNet/1.13.2": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard1.3/CloudinaryDotNet.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/CloudinaryDotNet.dll": {}
+        }
+      },
       "Dapper/2.0.35": {
         "type": "package",
         "dependencies": {
@@ -2290,6 +2299,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
+          "CloudinaryDotNet": "1.13.2",
           "Market.Domain": "1.0.0",
           "Microsoft.Extensions.Configuration.Abstractions": "5.0.0",
           "PhotoSauce.MagicScaler": "0.11.2"
@@ -2362,6 +2372,21 @@
     }
   },
   "libraries": {
+    "CloudinaryDotNet/1.13.2": {
+      "sha512": "JhtiKdPRZhO4Faa4jIthbfYCsHGiAQEswALo1xte5HhDzhFHobAjH/BrU1djP6PfyT0raDg1tc3LcSL6VX2ULw==",
+      "type": "package",
+      "path": "cloudinarydotnet/1.13.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "cloudinarydotnet.1.13.2.nupkg.sha512",
+        "cloudinarydotnet.nuspec",
+        "lib/net45/CloudinaryDotNet.dll",
+        "lib/net45/CloudinaryDotNet.xml",
+        "lib/netstandard1.3/CloudinaryDotNet.dll",
+        "lib/netstandard1.3/CloudinaryDotNet.xml"
+      ]
+    },
     "Dapper/2.0.35": {
       "sha512": "/xAgd8BO8EDnJ0sURWEV8LptHHvTKxoYiT63YUF2U/yWE2VyUCqR2jcrtEyNngT9Kjzppecz95UKiBla3PnR7g==",
       "type": "package",

@@ -43,7 +43,7 @@ namespace Market.Infrastructure.Migrations
                     b.Property<DateTime>("Expiration")
                         .HasColumnType("datetime2");
 
-                    b.Property<bool>("ForBaby")
+                    b.Property<bool?>("ForBaby")
                         .HasColumnType("bit");
 
                     b.Property<byte>("Gender")

@@ -25,6 +25,13 @@ namespace Market.Api.Controllers
            return Ok();
         }
 
+        [HttpPost("[action]")]
+        public async Task<IActionResult> AddProductImages([FromBody] AddProductImageCommand command)
+        {
+            await _commandSender.SendAsync(command);
+            return Ok();
+        }
+
         [HttpDelete("[action]")]
         public async Task<IActionResult> RemoveProduct([FromBody] DeleteProductCommand command)
         {
@@ -45,5 +52,35 @@ namespace Market.Api.Controllers
             await _commandSender.SendAsync(command);
             return Ok();
         }
+
+        [HttpPut("[action]")]
+        public async Task<IActionResult> ChangeProductBrand([FromBody] ChangeProductBrandCommand command)
+        {
+            await _commandSender.SendAsync(command);
+            return Ok();
+        }
+
+        [HttpPut("[action]")]
+        public async Task<IActionResult> ChangeProductColor([FromBody] ChangeProductColorCommand command)
+        {
+            await _commandSender.SendAsync(command);
+            return Ok();
+        }
+
+        [HttpPut("[action]")]
+        public async Task<IActionResult> ChangeProductType([FromBody] ChangeProductTypeCommand command)
+        {
+            await _commandSender.SendAsync(command);
+            return Ok();
+        }
+
+        [HttpPut("[action]")]
+        public async Task<IActionResult> ChangeProductDiscount([FromBody] ChangeProductDiscountCommand command)
+        {
+            await _commandSender.SendAsync(command);
+            return Ok();
+        }
+
+        
     }
 }

@@ -10,5 +10,5 @@ C:\MarketProject\MarketProject\Market.Backend\Market\Market.Application\obj\Debu
 C:\MarketProject\MarketProject\Market.Backend\Market\Market.Application\obj\Debug\netcoreapp3.1\Market.Application.csproj.CopyComplete
 C:\MarketProject\MarketProject\Market.Backend\Market\Market.Application\obj\Debug\netcoreapp3.1\Market.Application.dll
 C:\MarketProject\MarketProject\Market.Backend\Market\Market.Application\obj\Debug\netcoreapp3.1\Market.Application.pdb
-C:\MarketProject\MarketProject\Market.Backend\Market\Market.Application\obj\Debug\netcoreapp3.1\Market.Application.csproj.CoreCompileInputs.cache
 C:\MarketProject\MarketProject\Market.Backend\Market\Market.Application\bin\Debug\netcoreapp3.1\Core.pdb
+C:\MarketProject\MarketProject\Market.Backend\Market\Market.Application\obj\Debug\netcoreapp3.1\Market.Application.csproj.CoreCompileInputs.cache

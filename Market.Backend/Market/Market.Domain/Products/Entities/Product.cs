@@ -70,7 +70,7 @@ namespace Market.Domain.Products.Entities
 
         public void Delete(DeleteProductCommand command)
         {
-            ApplyChange(new DeletedProductEvent(this,command));
+            ApplyChange(new DeletedProductEvent(this, command));
         }
 
         public void Apply(DeletedProductEvent e)
@@ -80,7 +80,7 @@ namespace Market.Domain.Products.Entities
 
         public void ChangeProductName(ChangeProductNameCommand command)
         {
-            ApplyChange(new ChangedProductNameEvent(command.Name,this,command));
+            ApplyChange(new ChangedProductNameEvent(command.Name, this, command));
         }
 
         public void Apply(ChangedProductNameEvent e)
@@ -91,12 +91,63 @@ namespace Market.Domain.Products.Entities
         public void ChangeProductPrice(ChangeProductPriceCommand command)
         {
             ValidatePrice(command.Price);
-            ApplyChange(new ChangedProductPriceEvent(command.Price,this,command));
+            ApplyChange(new ChangedProductPriceEvent(command.Price, this, command));
         }
 
         public void Apply(ChangedProductPriceEvent e)
         {
             Price = e.Price;
+        }
+
+        public void ChangeProductBrand(ChangeProductBrandCommand command)
+        {
+            ApplyChange(new ChangedProductBrandEvent(command.Brand, this, command));
+        }
+
+        public void Apply(ChangedProductBrandEvent e)
+        {
+            Brand = e.Brand;
+        }
+
+        public void ChangeProductColor(ChangeProductColorCommand command)
+        {
+            ApplyChange(new ChangedProductColorEvent(command.Color, this, command));
+        }
+
+        public void Apply(ChangedProductColorEvent e)
+        {
+            Color = e.Color;
+        }
+
+        public void ChangeProductType(ChangeProductTypeCommand command)
+        {
+            ApplyChange(new ChangedProductTypeEvent(command.ProductType, this, command));
+        }
+
+        public void Apply(ChangedProductTypeEvent e)
+        {
+            ProductType = e.ProductType;
+        }
+
+        public void ChangeProductDiscount(ChangeProductDiscountCommand command)
+        {
+            ValidateDiscount(command.Discount);
+            ApplyChange(new ChangedProductDiscountEvent(command.Discount,this,command));
+        }
+
+        public void Apply(ChangedProductDiscountEvent e)
+        {
+            Discount = e.Discount;
+        }
+
+        public void AddProductImage(AddProductImageCommand command)
+        {
+            ApplyChange(new AddedProductImageEvent(command.Images,this,command));
+        }
+
+        public void Apply(AddedProductImageEvent e)
+        {
+            Images.AddRange(e.Images);
         }
 
         #region ValidationMethods
