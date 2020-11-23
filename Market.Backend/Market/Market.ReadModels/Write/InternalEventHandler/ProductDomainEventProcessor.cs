@@ -12,14 +12,16 @@ namespace Market.ReadModels.Write.InternalEventHandler
 {
     public class ProductDomainEventProcessor :
         IInternalEventHandler<CreatedProductEvent>,
+        IInternalEventHandler<AddedProductImageEvent>,
         IInternalEventHandler<DeletedProductEvent>,
+        IInternalEventHandler<DeletedProductImageEvent>,
         IInternalEventHandler<ChangedProductNameEvent>,
         IInternalEventHandler<ChangedProductPriceEvent>,
         IInternalEventHandler<ChangedProductBrandEvent>,
         IInternalEventHandler<ChangedProductColorEvent>,
         IInternalEventHandler<ChangedProductTypeEvent>,
         IInternalEventHandler<ChangedProductDiscountEvent>,
-        IInternalEventHandler<AddedProductImageEvent>
+        IInternalEventHandler<ChangedProductForBabyEvent>
     {
         private readonly IReadModelRepository<ProductReadModel, Guid> _repo;
 
@@ -91,6 +93,17 @@ namespace Market.ReadModels.Write.InternalEventHandler
         public async Task HandleAsync(AddedProductImageEvent @event, CancellationToken cancellationToken = default)
         {
             await _repo.UpdateAsync(@event.AggregateId, x => x.Images.AddRange(@event.Images), cancellationToken);
+        }
+
+        public async Task HandleAsync(DeletedProductImageEvent @event, CancellationToken cancellationToken = default)
+        {
+            await _repo.UpdateAsync(@event.AggregateId,
+                x => x.Images.RemoveAll(o => o.ImageUrl.Contains(@event.PublicId)), cancellationToken);
+        }
+
+        public async Task HandleAsync(ChangedProductForBabyEvent @event, CancellationToken cancellationToken = default)
+        {
+            await _repo.UpdateAsync(@event.AggregateId, x => x.ForBaby = @event.ForBaby, cancellationToken);
         }
     }
 }

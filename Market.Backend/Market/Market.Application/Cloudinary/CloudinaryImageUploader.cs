@@ -18,6 +18,8 @@ namespace Market.Application.Cloudinary
             _account = new Account() { ApiKey = ApiKey, ApiSecret = ApiSecret, Cloud = CloudName };
             _cloudinary = new CloudinaryDotNet.Cloudinary(_account);
         }
+
+        
         public async Task<ImageUploadResult> Upload(string uniqueName, byte[] image, int? width, int? height)
         {
             //todo fix 
@@ -46,6 +48,12 @@ namespace Market.Application.Cloudinary
             };
             var uploadResult = await _cloudinary.UploadAsync(uploadParams);
             return uploadResult;
+        }
+
+
+        public async Task<object> DeleteByTag(string publicId)
+        {
+           return await _cloudinary.DeleteResourcesAsync(publicId);
         }
     }
 }

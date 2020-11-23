@@ -1,7 +1,5 @@
 ﻿using Market.Domain.Products.Commands;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using CloudinaryDotNet.Actions;
@@ -9,15 +7,15 @@ using Core.Commands;
 using Core.Repository;
 using Market.Application.Cloudinary;
 using Market.Domain.Products.Entities;
-using Market.Domain.Products.Events;
 using Market.Domain.Products.Exceptions;
 using Market.Domain.Products.ValueObjects;
-using PhotoSauce.MagicScaler;
 
 namespace Market.Application.CommandHandlers
 {
     public class ProductCommandHandler :
         ICommandHandler<CreateProductCommand>,
+        ICommandHandler<AddProductImageCommand>,
+        ICommandHandler<DeleteProductImageCommand>,
         ICommandHandler<DeleteProductCommand>,
         ICommandHandler<ChangeProductNameCommand>,
         ICommandHandler<ChangeProductPriceCommand>,
@@ -25,7 +23,8 @@ namespace Market.Application.CommandHandlers
         ICommandHandler<ChangeProductColorCommand>,
         ICommandHandler<ChangeProductTypeCommand>,
         ICommandHandler<ChangeProductDiscountCommand>,
-        ICommandHandler<AddProductImageCommand>
+        ICommandHandler<ChangeProductForBabyCommand>
+
     {
         private readonly IAggregateRepository<Product, Guid> _repo;
 
@@ -35,13 +34,13 @@ namespace Market.Application.CommandHandlers
         }
         public async Task HandleAsync(CreateProductCommand command, CancellationToken cancellationToken = new CancellationToken())
         {
-            var imageUploader= new CloudinaryImageUploader();
+            var imageUploader = new CloudinaryImageUploader();
 
             foreach (var imageString in command.ImagesString)
             {
                 var bytesImg = Convert.FromBase64String(imageString.Substring(imageString.IndexOf(',') + 1));
                 var img = await imageUploader.Upload(Guid.NewGuid().ToString(), bytesImg, 500, 450);
-                command.Images.Add(new Image(){ImageUrl = img.SecureUrl.AbsoluteUri});
+                command.Images.Add(new Image() { ImageUrl = img.SecureUrl.AbsoluteUri });
             }
 
             if (command.Images.Count > 0)
@@ -84,14 +83,14 @@ namespace Market.Application.CommandHandlers
             {
                 throw new CannotFindException("No data on this Id");
             }
-         
+
             aggregateProduct.ChangeProductPrice(command);
             await _repo.SaveAsync(aggregateProduct, cancellationToken);
         }
 
         public async Task HandleAsync(ChangeProductBrandCommand command, CancellationToken cancellationToken = default)
         {
-            var aggregateProduct = await _repo.GetAsync(command.Id, cancellationToken:cancellationToken);
+            var aggregateProduct = await _repo.GetAsync(command.Id, cancellationToken: cancellationToken);
             if (aggregateProduct == null)
             {
                 throw new CannotFindException("No data on this Id");
@@ -156,6 +155,40 @@ namespace Market.Application.CommandHandlers
 
 
             aggregateProduct.AddProductImage(command);
+            await _repo.SaveAsync(aggregateProduct, cancellationToken);
+        }
+
+        public async Task HandleAsync(DeleteProductImageCommand command, CancellationToken cancellationToken = default)
+        {
+            var aggregateProduct = await _repo.GetAsync(command.Id, cancellationToken: cancellationToken);
+            if (aggregateProduct == null)
+            {
+                throw new CannotFindException("No data on this Id");
+            }
+
+            var cloudinary = new CloudinaryImageUploader();
+            var result = await cloudinary.DeleteByTag(command.PublicId) as DelResResult;
+
+            if (result?.DeletedCounts?.Count > 0)
+            {
+                aggregateProduct.DeleteProductImage(command);
+                await _repo.SaveAsync(aggregateProduct, cancellationToken);
+            }
+            else
+            {
+                throw new Exception($"Can not find images: {result}");
+            }
+        }
+
+        public async Task HandleAsync(ChangeProductForBabyCommand command, CancellationToken cancellationToken = default)
+        {
+            var aggregateProduct = await _repo.GetAsync(command.Id, cancellationToken: cancellationToken);
+            if (aggregateProduct == null)
+            {
+                throw new CannotFindException("No data on this Id");
+            }
+
+            aggregateProduct.ChangeForBaby(command);
             await _repo.SaveAsync(aggregateProduct, cancellationToken);
         }
     }

@@ -39,6 +39,13 @@ namespace Market.Api.Controllers
             return Ok();
         }
 
+        [HttpDelete("[action]")]
+        public async Task<IActionResult> RemoveProductImage([FromBody] DeleteProductImageCommand command)
+        {
+            await _commandSender.SendAsync(command);
+            return Ok();
+        }
+
         [HttpPut("[action]")]
         public async Task<IActionResult> ChangeProductName([FromBody] ChangeProductNameCommand command)
         {

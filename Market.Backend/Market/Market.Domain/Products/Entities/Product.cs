@@ -3,6 +3,8 @@ using Core.Domain;
 using Market.Domain.Products.Commands;
 using Market.Domain.Products.Events;
 using Market.Domain.Products.Exceptions;
+using System.Linq.Expressions;
+using System.Security.Cryptography.X509Certificates;
 
 namespace Market.Domain.Products.Entities
 {
@@ -132,7 +134,7 @@ namespace Market.Domain.Products.Entities
         public void ChangeProductDiscount(ChangeProductDiscountCommand command)
         {
             ValidateDiscount(command.Discount);
-            ApplyChange(new ChangedProductDiscountEvent(command.Discount,this,command));
+            ApplyChange(new ChangedProductDiscountEvent(command.Discount, this, command));
         }
 
         public void Apply(ChangedProductDiscountEvent e)
@@ -142,12 +144,32 @@ namespace Market.Domain.Products.Entities
 
         public void AddProductImage(AddProductImageCommand command)
         {
-            ApplyChange(new AddedProductImageEvent(command.Images,this,command));
+            ApplyChange(new AddedProductImageEvent(command.Images, this, command));
         }
 
         public void Apply(AddedProductImageEvent e)
         {
             Images.AddRange(e.Images);
+        }
+
+        public void DeleteProductImage(DeleteProductImageCommand command)
+        {
+            ApplyChange(new DeletedProductImageEvent(command.PublicId, this, command));
+        }
+
+        public void Apply(DeletedProductImageEvent e)
+        {
+            Images.RemoveAll(x => x.ImageUrl.Contains(e.PublicId));
+        }
+
+        public void ChangeForBaby(ChangeProductForBabyCommand command)
+        {
+            ApplyChange(new ChangedProductForBabyEvent(command.ForBaby, this, command));
+        }
+
+        public void Apply(ChangedProductForBabyEvent e)
+        {
+            ForBaby = e.ForBaby;
         }
 
         #region ValidationMethods

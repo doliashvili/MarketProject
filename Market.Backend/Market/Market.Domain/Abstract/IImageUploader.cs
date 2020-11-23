@@ -8,5 +8,6 @@ namespace Market.Domain.Abstract
     public interface IImageUploader<T> where T : class
     {
         Task<T> Upload(string uniqueName, byte[] image, int? width = null, int? height = null);
+        Task<object> DeleteByTag(string tag);
     }
 }
